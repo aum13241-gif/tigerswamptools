@@ -8,6 +8,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Hanken+Grotesk:wght@400;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
@@ -32,6 +33,22 @@ tailwind.config = {
 </script>
 
 <style>
+.logo-text{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:3px;
+}
+  html{
+  scroll-behavior:smooth;
+}
+
+*{
+  transition:
+  background .3s ease,
+  color .3s ease,
+  border .3s ease,
+  transform .3s ease,
+  opacity .3s ease;
+} 
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -53,6 +70,16 @@ body{
 }
 
 .hero-overlay{
+  .hero-glow{
+  position:absolute;
+  width:700px;
+  height:700px;
+  background:rgba(211,47,47,.25);
+  filter:blur(140px);
+  border-radius:999px;
+  top:-200px;
+  right:-150px;
+}
   background:
   linear-gradient(
     to right,
@@ -73,6 +100,31 @@ body{
 }
 
 .btn-main:hover{
+  .btn-main{
+  position:relative;
+  overflow:hidden;
+}
+
+.btn-main::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:100%;
+  height:100%;
+  background:
+  linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.4),
+    transparent
+  );
+  transition:.7s;
+}
+
+.btn-main:hover::before{
+  left:120%;
+}
   transform:scale(1.05);
   filter:brightness(1.1);
 }
@@ -100,10 +152,17 @@ body{
 .card img{
   transition:.7s;
 }
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.45),
+  0 0 20px rgba(211,47,47,.2);
+}
 
 .card:hover img{
-  transform:scale(1.08);
+  transform:scale(1.1);
 }
+
 
 .card-overlay{
   background:
@@ -115,18 +174,22 @@ body{
 }
 
 .section-title{
-  font-family:'Montserrat',sans-serif;
-  font-weight:900;
-  font-style:italic;
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:3px;
   text-transform:uppercase;
-  font-size:42px;
+  font-size:58px;
+  line-height:1;
 }
+
 
 .highlight{
   color:#d32f2f;
 }
 
 .nav-link{
+  font-family:'Bebas Neue',sans-serif;
+letter-spacing:1px;
+font-size:20px;
   transition:.3s;
   text-transform:uppercase;
   font-weight:700;
@@ -173,17 +236,164 @@ body{
 
 .fab:hover{
   transform:scale(1.1);
+  .hero-title{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:4px;
+  line-height:.9;
 }
+  .loader{
+  position:fixed;
+  inset:0;
+  background:#131313;
+  z-index:99999;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:opacity .8s ease, visibility .8s ease;
+}
+
+.loader::before{
+  content:'';
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:
+  radial-gradient(
+    circle,
+    rgba(211,47,47,.25),
+    transparent 70%
+  );
+
+  filter:blur(60px);
+
+  animation:
+  pulseGlow 3s infinite ease-in-out;
+}
+
+.loader.hidden{
+  opacity:0;
+  visibility:hidden;
+}
+
+.loader-logo{
+  text-align:center;
+padding:0 20px;
+@media(max-width:768px){
+
+  .loader-logo{
+    font-size:54px;
+  }
+
+}
+  font-family:'Bebas Neue',sans-serif;
+  font-size:90px;
+  color:#d32f2f;
+  letter-spacing:6px;
+  margin-bottom:30px;
+
+  opacity:0;
+  transform:
+  scale(.7)
+  translateY(40px);
+
+  animation:
+  logoReveal 1.8s ease forwards;
+
+  text-shadow:
+  0 0 10px rgba(211,47,47,.5),
+  0 0 30px rgba(211,47,47,.4),
+  0 0 60px rgba(211,47,47,.3);
+}
+}
+
+.loader-spinner{
+  width:80px;
+  height:80px;
+  border:5px solid rgba(255,255,255,.1);
+  border-top:5px solid #ff9800;
+  border-radius:999px;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes pulseGlow{
+  0%{
+    transform:scale(1);
+    opacity:.5;
+  }
+
+  50%{
+    transform:scale(1.2);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:.5;
+  }
+}
+
+@keyframes spin{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes logoReveal{
+  0%{
+    opacity:0;
+    transform:
+    scale(.6)
+    translateY(60px);
+    letter-spacing:20px;
+    filter:blur(10px);
+  }
+
+  60%{
+    opacity:1;
+    transform:
+    scale(1.05)
+    translateY(0);
+    letter-spacing:8px;
+    filter:blur(0);
+  }
+
+  100%{
+    opacity:1;
+    transform:
+    scale(1)
+    translateY(0);
+    letter-spacing:6px;
+    filter:blur(0);
+  }
+}
+  to{
+    transform:rotate(360deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+
 </style>
 </head>
 
 <body class="industrial-grid">
+  <!-- LOADING SCREEN -->
+<div class="loader" id="loader">
+
+<div class="loader-logo">
+Tiger Swamp Tools
+</div>
+
+<div class="loader-spinner"></div>
+
+</div>
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-background border-b-2 border-red-600 px-10 py-4 flex justify-between items-center">
+<header class="sticky top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-red-900 px-10 py-4 flex justify-between items-center">
 
 <div class="flex items-center gap-10">
-<h1 class="text-4xl font-black italic text-red-400">
+<h1 class="text-5xl tracking-wider text-red-400 logo-text">
 Tiger Swamp Tools
 </h1>
 
@@ -216,6 +426,7 @@ class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1800&auto=format&fit=crop">
 
 <div class="absolute inset-0 hero-overlay"></div>
+<div class="hero-glow"></div>
 
 <div class="relative z-10 max-w-4xl px-12">
 
@@ -223,7 +434,7 @@ src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1800&au
 ร้านขายเครื่องมือช่างคุณภาพสูง
 </div>
 
-<h2 class="text-7xl font-black italic uppercase mb-6">
+<h2 class="hero-title text-5xl md:text-8xl uppercase mb-6 leading-none">
 Tiger Swamp
 <span class="highlight">Tools</span>
 </h2>
@@ -627,6 +838,16 @@ Tiger Swamp Tools
 chat_bubble
 </span>
 </button>
+<script>
+window.addEventListener("load", () => {
 
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 1200);
+
+});
+</script>
 </body>
 </html>
