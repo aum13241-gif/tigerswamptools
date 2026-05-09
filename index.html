@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html class="dark" lang="th">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tiger Swamp Tools | ร้านขายเครื่องมือออนไลน์</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Hanken+Grotesk:wght@400;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#131313",
+        primary: "#ffb3ac",
+        primaryContainer: "#d32f2f",
+        secondaryContainer: "#ff9800",
+        surface: "#1c1b1b",
+        surfaceVariant: "#353534",
+        text: "#e5e2e1",
+        muted: "#c9b4b1"
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+body{
+  background:#131313;
+  color:#e5e2e1;
+  font-family:'Hanken Grotesk',sans-serif;
+}
+
+.industrial-grid{
+  background-image:
+  radial-gradient(circle,#353534 1px,transparent 1px);
+  background-size:32px 32px;
+}
+
+.hero-overlay{
+  background:
+  linear-gradient(
+    to right,
+    rgba(19,19,19,1),
+    rgba(19,19,19,.85),
+    rgba(19,19,19,.2)
+  );
+}
+
+.btn-main{
+  background:#ff9800;
+  color:#653900;
+  padding:16px 32px;
+  font-weight:700;
+  text-transform:uppercase;
+  transition:.3s;
+  clip-path: polygon(0 0, 88% 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+.btn-main:hover{
+  transform:scale(1.05);
+  filter:brightness(1.1);
+}
+
+.btn-outline{
+  border:2px solid #d32f2f;
+  color:#ffb3ac;
+  padding:16px 32px;
+  font-weight:700;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.btn-outline:hover{
+  background:rgba(211,47,47,.15);
+}
+
+.card{
+  background:#1c1b1b;
+  border:1px solid #353534;
+  overflow:hidden;
+  transition:.4s;
+}
+
+.card img{
+  transition:.7s;
+}
+
+.card:hover img{
+  transform:scale(1.08);
+}
+
+.card-overlay{
+  background:
+  linear-gradient(
+    to top,
+    rgba(19,19,19,.95),
+    transparent
+  );
+}
+
+.section-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  font-style:italic;
+  text-transform:uppercase;
+  font-size:42px;
+}
+
+.highlight{
+  color:#d32f2f;
+}
+
+.nav-link{
+  transition:.3s;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+.nav-link:hover{
+  color:#ffb3ac;
+}
+
+.brand-card{
+  background:white;
+  padding:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  filter:grayscale(100%);
+  transition:.3s;
+}
+
+.brand-card:hover{
+  filter:grayscale(0);
+}
+
+.contact-box{
+  background:#1c1b1b;
+  border-right:4px solid #d32f2f;
+}
+
+.fab{
+  position:fixed;
+  right:32px;
+  bottom:32px;
+  width:60px;
+  height:60px;
+  border-radius:999px;
+  background:#ff9800;
+  color:#653900;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  transition:.3s;
+}
+
+.fab:hover{
+  transform:scale(1.1);
+}
+</style>
+</head>
+
+<body class="industrial-grid">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-background border-b-2 border-red-600 px-10 py-4 flex justify-between items-center">
+
+<div class="flex items-center gap-10">
+<h1 class="text-4xl font-black italic text-red-400">
+Tiger Swamp Tools
+</h1>
+
+<nav class="hidden lg:flex gap-6">
+<a class="nav-link text-red-300" href="#">เครื่องมือไฟฟ้า</a>
+<a class="nav-link" href="#">เครื่องมือช่าง</a>
+<a class="nav-link" href="#">แบรนด์สินค้า</a>
+<a class="nav-link" href="#">ติดต่อเรา</a>
+</nav>
+</div>
+
+<div class="flex items-center gap-4">
+<input
+class="bg-[#1c1b1b] border border-[#353534] px-4 py-2"
+placeholder="ค้นหาเครื่องมือ..."
+type="text">
+
+<span class="material-symbols-outlined cursor-pointer">
+search
+</span>
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="relative h-screen overflow-hidden flex items-center">
+
+<img
+class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
+src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1800&auto=format&fit=crop">
+
+<div class="absolute inset-0 hero-overlay"></div>
+
+<div class="relative z-10 max-w-4xl px-12">
+
+<div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-6">
+ร้านขายเครื่องมือช่างคุณภาพสูง
+</div>
+
+<h2 class="text-7xl font-black italic uppercase mb-6">
+Tiger Swamp
+<span class="highlight">Tools</span>
+</h2>
+
+<p class="text-xl text-gray-300 mb-10 leading-relaxed">
+เครื่องมือและอุปกรณ์งานช่างระดับมืออาชีพ
+สำหรับงานอุตสาหกรรม งานก่อสร้าง และงานหนักทุกประเภท
+</p>
+
+<div class="flex gap-4">
+<a 
+class="btn-main inline-block"
+href="https://heyzine.com/flip-book/558e502ac4.html"
+target="_blank"
+>
+ดูแคตตาล็อก
+</a>
+<button class="btn-outline">แบรนด์สินค้าของเรา</button>
+</div>
+
+</div>
+</section>
+
+<!-- MILWAUKEE PRODUCTS -->
+<section class="py-20 px-10">
+
+<div class="text-center mb-14">
+<h2 class="section-title">
+เครื่องมือ <span class="highlight">Milwaukee</span>
+</h2>
+
+<p class="uppercase tracking-widest text-gray-400 mt-4">
+เครื่องมือระดับมืออาชีพ แข็งแรง ทนทาน พร้อมลุยทุกงาน
+</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+<!-- PRODUCT 1 -->
+<div class="card">
+
+<img
+class="w-full h-64 object-cover"
+src="https://www.milwaukeetool.in.th/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/m/1/m18-fpd3_hero-1.png">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold mb-3 text-red-400">
+สว่านกระแทก Milwaukee
+</h3>
+
+<p class="text-gray-300 mb-5">
+สว่านกำลังสูง สำหรับงานเจาะคอนกรีตและงานอุตสาหกรรม
+</p>
+
+<button class="btn-main w-full">
+ดูรายละเอียด
+</button>
+
+</div>
+</div>
+
+<!-- PRODUCT 2 -->
+<div class="card">
+
+<img
+class="w-full h-64 object-cover"
+src="https://www.milwaukeetool.in.th/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/m/1/m18-fsagv125xb-hero01.jpg">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold mb-3 text-red-400">
+เครื่องเจียร Milwaukee
+</h3>
+
+<p class="text-gray-300 mb-5">
+เครื่องเจียรงานหนัก มอเตอร์แรง ทนต่อการใช้งานต่อเนื่อง
+</p>
+
+<button class="btn-main w-full">
+ดูรายละเอียด
+</button>
+
+</div>
+</div>
+
+<!-- PRODUCT 3 -->
+<div class="card">
+
+<img
+class="w-full h-64 object-cover"
+src="https://www.milwaukeetool.in.th/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/m/1/m12-fhs-0-hero01.jpg">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold mb-3 text-red-400">
+เลื่อยไฟฟ้า Milwaukee
+</h3>
+
+<p class="text-gray-300 mb-5">
+ตัดแม่นยำ ใช้งานง่าย เหมาะสำหรับงานไม้และโลหะ
+</p>
+
+<button class="btn-main w-full">
+ดูรายละเอียด
+</button>
+
+</div>
+</div>
+
+<!-- PRODUCT 4 -->
+<div class="card">
+
+<img
+class="w-full h-64 object-cover"
+src="https://image.makewebcdn.com/makeweb/m_1920x0/2dP9r9iWx/DefaultData/71299_0_1.jpg?v=202405291424">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold mb-3 text-red-400">
+ชุดเครื่องมือ Milwaukee
+</h3>
+
+<p class="text-gray-300 mb-5">
+ครบชุดสำหรับช่างมืออาชีพ พร้อมใช้งานทุกสถานการณ์
+</p>
+
+<button class="btn-main w-full">
+ดูรายละเอียด
+</button>
+
+</div>
+</div>
+
+</div>
+</section>
+<!-- CATEGORY -->
+<section class="py-20 px-10 bg-[#1c1b1b]">
+
+<div class="text-center mb-16">
+<h2 class="section-title">
+หมวดหมู่ <span class="highlight">สินค้า</span>
+</h2>
+
+<p class="uppercase tracking-widest text-gray-400 mt-4">
+อุปกรณ์คุณภาพสูงสำหรับมืออาชีพ
+</p>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-8">
+
+<!-- CARD -->
+<div class="card relative h-[450px]">
+<img
+class="w-full h-full object-cover opacity-70"
+src="https://www.milwaukeetool.in.th/media/wysiwyg/homepage/M18_FMTIW2F12--App09.jpg">
+
+<div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
+
+<div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-4 w-fit">
+ตัวแทนจำหน่ายอันดับ 1 จังหวัดปทุมธานี
+</div>
+
+<h3 class="text-4xl font-bold mb-4">
+ศูนย์ตัวแทนจำหน่าย<br>
+<span class="text-Cyan-400">Tiger Swamp Tools</span>
+</h3>
+
+<p class="text-gray-300 mb-4 leading-relaxed">
+ตัวแทนจำหน่ายเครื่องมือช่างและเครื่องมือไฟฟ้าคุณภาพสูง
+ที่ได้รับความไว้วางใจจากช่างมืออาชีพ โรงงานอุตสาหกรรม
+และผู้รับเหมาในจังหวัดปทุมธานี พร้อมสินค้าของแท้และบริการครบวงจร
+</p>
+
+<div class="flex items-center gap-3 text-orange-400 font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined">
+verified
+</span>
+ศูนย์จำหน่ายมาตรฐานมืออาชีพ
+</div>
+
+<a class="mt-5 text-red-400 uppercase font-bold flex items-center gap-2" href="#">
+ดูข้อมูลเพิ่มเติม →
+</a>
+
+</div>
+</div>
+<!-- CARD -->
+<div class="card relative h-[450px]">
+
+<img
+class="w-full h-full object-cover opacity-70"
+src="https://static.summitracing.com/global/images/prod/xlarge/mwt-2960-20_kk_xl.jpg">
+
+<div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
+
+<h3 class="text-4xl font-bold mb-4">
+เครื่องมือช่าง
+</h3>
+
+<p class="text-gray-300 mb-4">
+ประแจ คีม และอุปกรณ์งานช่างคุณภาพสูง
+</p>
+
+<a class="text-red-400 uppercase font-bold" href="#">
+ดูหมวดหมู่ →
+</a>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="py-20 px-10 grid lg:grid-cols-2 gap-16">
+
+<div>
+
+<h2 class="section-title mb-10">
+ติดต่อ <span class="highlight">เรา</span>
+</h2>
+
+<div class="space-y-8">
+
+<div>
+<h4 class="font-bold uppercase text-red-300 mb-2">
+🚩 ที่ตั้งร้าน
+</h4>
+
+<p class="text-gray-300">
+58 หมู่ 11 ตำบลบึงบา อำเภอหนองเสือ จังหวัดปทุมธานี 12170
+</p>
+</div>
+
+<div>
+<h4 class="font-bold uppercase text-red-300 mb-2">
+📞 เบอร์โทรศัพท์และอีเมล
+</h4>
+
+<p class="text-gray-300">
+094-393-3144 / 062-564-1224        EMAIL : subin.210443@gmail.com
+</p>
+</div>
+
+<div>
+  <h4 class="font-bold uppercase text-red-300 mb-4">
+    📱 โซเชียลมีเดีย
+  </h4>
+
+  <div class="flex flex-wrap gap-4">
+
+    <!-- Facebook -->
+    <a 
+      href="https://www.facebook.com/profile.php?id=61585347449896"
+      target="_blank"
+      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-blue-600 transition font-bold uppercase">
+      Facebook
+    </a>
+
+    <!-- Shopee -->
+    <a 
+      href="https://shopee.co.th/tigerswamptoolss_2026?entryPoint=ShopBySearch&searchKeyword=tigerswamptools"
+      target="_blank"
+      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-orange-500 transition font-bold uppercase">
+      Shopee
+    </a>
+
+    <!-- Lazada -->
+    <a 
+      
+      href="https://www.lazada.co.th/" 
+      target="_blank"
+      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-purple-600 transition font-bold uppercase">
+      Lazada
+    </a>
+
+    <!-- TikTok -->
+    <a 
+      href="https://www.tiktok.com/" 
+      target="_blank"
+      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-pink-500 transition font-bold uppercase">
+      TikTok
+    </a>
+
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="relative overflow-hidden border-4 border-[#353534] min-h-[500px] rounded-xl">
+
+<!-- Google Maps Embed -->
+<iframe
+class="absolute inset-0 w-full h-full"
+src="https://www.google.com/maps?q=58%20หมู่%2011%20ตำบลบึงบา%20อำเภอหนองเสือ%20จังหวัดปทุมธานี%2012170&output=embed"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+<!-- Overlay -->
+<div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+
+<!-- Click Button -->
+<a
+href="https://maps.google.com/?q=58%20หมู่%2011%20ตำบลบึงบา%20อำเภอหนองเสือ%20จังหวัดปทุมธานี%2012170"
+target="_blank"
+class="absolute bottom-6 left-6 bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 uppercase tracking-wider transition z-10">
+
+เปิดใน Google Maps →
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black py-16 px-10 border-t-4 border-orange-500">
+
+<div class="grid md:grid-cols-4 gap-10">
+
+<div>
+<h3 class="text-3xl font-black italic text-red-400 mb-4">
+Tiger Swamp Tools
+</h3>
+
+<p class="text-gray-500">
+ร้านจำหน่ายเครื่องมือช่างและอุปกรณ์อุตสาหกรรมคุณภาพสูง
+</p>
+</div>
+
+<div>
+<h4 class="uppercase font-bold text-red-300 mb-4">
+สินค้า
+</h4>
+
+<ul class="space-y-2 text-gray-400">
+<li>เครื่องมือไฟฟ้า</li>
+<li>เครื่องมือช่าง</li>
+<li>อุปกรณ์เซฟตี้</li>
+<li>แบรนด์สินค้า</li>
+</ul>
+</div>
+
+<div>
+<h4 class="uppercase font-bold text-red-300 mb-4">
+บริการลูกค้า
+</h4>
+
+<ul class="space-y-2 text-gray-400">
+<li>ฝ่ายเทคนิค</li>
+<li>นโยบายรับประกัน</li>
+<li>ข้อมูลการจัดส่ง</li>
+<li>ค้นหาสาขา</li>
+</ul>
+</div>
+
+<div>
+<h4 class="uppercase font-bold text-red-300 mb-4">
+มาตรฐานอุตสาหกรรม
+</h4>
+
+<div class="grid grid-cols-2 gap-4">
+
+<div class="bg-[#1c1b1b] p-4 text-center border border-[#353534]">
+<div class="text-2xl font-bold">ISO</div>
+<div class="text-xs">9001:2015</div>
+</div>
+
+<div class="bg-[#1c1b1b] p-4 text-center border border-[#353534]">
+<div class="text-2xl font-bold">OSHA</div>
+<div class="text-xs">ผ่านมาตรฐาน</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<p class="text-center text-gray-500 mt-12 text-sm">
+© 2024 Tiger Swamp Tools สงวนลิขสิทธิ์ทั้งหมด
+</p>
+
+</footer>
+
+<!-- FAB -->
+<button class="fab">
+<span class="material-symbols-outlined">
+chat_bubble
+</span>
+</button>
+
+</body>
+</html>
