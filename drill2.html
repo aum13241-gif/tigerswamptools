@@ -1,40 +1,309 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-สว่านแท่นแม่เหล็กไร้สาย</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title> สว่านแท่นแม่เหล็กไร้สาย Milwaukee M18 FMDP-0C0 </title>
 
 <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+    font-family: sans-serif;
+}
+</style>
+
 </head>
 
-<body class="bg-black text-white p-10">
+<body class="bg-[#f5f5f5] text-black">
 
-<h1 class="text-5xl font-bold text-red-500 mb-6">
+<!-- NAVBAR -->
+<header class="bg-white border-b sticky top-0 z-50">
 
-สว่านแท่นแม่เหล็กไร้สาย Milwaukee M18 FMDP-0C0
-</h1>
+    <div class="max-w-7xl mx-auto h-16 px-4 flex items-center justify-between">
 
-<img
-src="https://down-th.img.susercontent.com/th-11134207-81ztc-mnwf67pc25fl24"
-class="w-full max-w-xl mb-8">
+        <div class="flex items-center gap-3">
 
-<p class="text-xl text-gray-300 leading-relaxed mb-6">
-สว่านกำลังสูง เหมาะสำหรับงานเจาะคอนกรีต งานเหล็ก
-และงานอุตสาหกรรมหนัก สว่านเจาะ Annular หรือดอกเจาะเกลียว
-ระบบหยุดอัตโนมัติเมื่อยกสว่านขึ้น เมื่อตรวจพบว่ามีการหมุนที่เร็วเกินและจะมีการตัดกำลังที่ส่งไปยังสว่านโดยอัตโนมัติเพื่อความปลอดภัยสูงสุดของผู้ใช้
-</p>
+            <button class="text-2xl">
+                ☰
+            </button>
 
-<div class="text-3xl text-orange-400 font-bold mb-8">
-฿52,715
+            <h1 class="text-lg md:text-2xl font-bold text-red-600">
+                Tiger Swamp Tools
+            </h1>
+
+        </div>
+
+        <div class="flex items-center gap-4">
+
+            <div class="hidden md:block">
+                <input
+                    type="text"
+                    placeholder="ค้นหา"
+                    class="border rounded-xl px-4 py-2 w-64 outline-none"
+                >
+            </div>
+
+            <button class="text-2xl">
+                🛒
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- MOBILE SEARCH -->
+<div class="md:hidden bg-white px-4 py-3 border-b">
+
+    <input
+        type="text"
+        placeholder="ค้นหาสินค้า..."
+        class="w-full border rounded-xl px-4 py-3 outline-none"
+    >
+
 </div>
 
-<a
-href="index.html"
-class="bg-red-600 px-6 py-3 inline-block font-bold">
-← กลับหน้าแรก
-</a>
+<!-- MAIN -->
+<section class="max-w-7xl mx-auto px-4 py-6">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+
+        <!-- LEFT -->
+        <div>
+
+            <!-- MAIN IMAGE -->
+            <div class="bg-white rounded-2xl p-4 md:p-8 shadow-sm">
+
+                <img
+                    id="mainImage"
+                    src="https://down-th.img.susercontent.com/th-11134207-81ztc-mnwf67pc25fl24"
+                    class="w-full rounded-xl object-cover transition duration-300"
+                >
+
+            </div>
+
+            <!-- THUMBNAILS -->
+            <div class="flex gap-3 mt-4 overflow-x-auto pb-2">
+
+                <img
+                    onclick="changeImage(this)"
+                    src="https://down-th.img.susercontent.com/th-11134207-81ztc-mnwf67pc25fl24"
+                    class="thumbnail w-20 h-20 rounded-xl border-2 border-red-500 object-cover flex-shrink-0 cursor-pointer"
+                >
+
+                <img
+                    onclick="changeImage(this)"
+                src="https://down-th.img.susercontent.com/th-11134207-81ztc-mnv8hu5mw4ck0b"
+                    class="thumbnail w-20 h-20 rounded-xl border object-cover flex-shrink-0 cursor-pointer"
+                >
+
+                <img
+                    onclick="changeImage(this)"
+                    src="https://down-th.img.susercontent.com/th-11134207-81ztq-mnv8hcexpptx25"
+                    class="thumbnail w-20 h-20 rounded-xl border object-cover flex-shrink-0 cursor-pointer"
+                >
+
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="bg-white rounded-2xl p-5 md:p-8 shadow-sm mt-6">
+
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                    รายละเอียดสินค้า
+                </h2>
+
+                <div class="space-y-4 text-gray-700 leading-relaxed text-sm md:text-lg">
+
+                    <p>• มอเตอร์ทรงพลังกำลังสูง 1200 วัตต์</p>
+
+                    <p>• ให้ความเร็วในการเจาะที่มีประสิทธิภาพสูงสุด</p>
+
+                    <p>• ความเร็วในการเจาะที่มีประสิทธิภาพสูงสุดที่ 475 และ 730 รอบต่อนาที</p>
+
+                    <p>• ระบบหยุดอัตโนมัติเมื่อยกสว่านขึ้น เมื่อตรวจพบว่ามีการหมุนที่เร็วเกิน</p>
+
+                    <p>• ใช้งานแบตเตอรี่ 18V</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+
+            <div class="bg-white rounded-2xl p-5 md:p-8 shadow-sm lg:sticky lg:top-24">
+
+                <!-- TITLE -->
+                <h1 class="text-2xl md:text-4xl font-bold leading-tight">
+
+                    สว่านแท่นแม่เหล็กไร้สาย Milwaukee M18 FMDP-0C0
+
+                </h1>
+
+                <!-- SKU -->
+                <p class="text-gray-500 mt-3">
+                    รหัสสินค้า #TM0307
+                </p>
+
+                <!-- PRICE -->
+                <div class="flex items-center gap-4 mt-6 flex-wrap">
+
+                    <div class="text-3xl md:text-5xl font-bold text-red-600">
+
+                        ฿52,715
+                    </div>
+
+                    <div class="bg-red-500 text-white px-3 py-1 rounded-lg font-bold">
+
+                        -5%
+
+                    </div>
+
+                </div>
+
+                <div class="text-gray-400 line-through text-lg mt-2">
+
+                    ฿55,490
+
+                </div>
+
+                <!-- STOCK -->
+                <div class="mt-6">
+
+                    <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-xl">
+
+                        ✓ มีสินค้า พร้อมส่ง
+
+                    </div>
+
+                </div>
+
+                <!-- QUANTITY -->
+                <div class="mt-8">
+
+                    <p class="font-bold mb-4 text-lg">
+                        จำนวน
+                    </p>
+
+                    <div class="flex items-center gap-4">
+
+                        <button
+                            onclick="decreaseQty()"
+                            class="w-12 h-12 bg-gray-200 rounded-xl text-2xl hover:bg-gray-300 transition"
+                        >
+                            -
+                        </button>
+
+                        <div
+                            id="qty"
+                            class="text-2xl font-bold w-10 text-center"
+                        >
+                            1
+                        </div>
+
+                        <button
+                            onclick="increaseQty()"
+                            class="w-12 h-12 bg-gray-200 rounded-xl text-2xl hover:bg-gray-300 transition"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="space-y-4 mt-10">
+
+                    <button
+                        class="w-full bg-red-600 hover:bg-red-700 transition py-4 rounded-2xl text-lg md:text-xl font-bold text-white"
+                    >
+                        เพิ่มสินค้าลงตะกร้า
+                    </button>
+
+                    <button
+                        class="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 transition py-4 rounded-2xl text-lg md:text-xl font-bold"
+                    >
+                        ซื้อเลย
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MOBILE BUY BAR -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t p-3 z-50">
+
+    <div class="flex gap-3">
+
+        <button
+            class="w-14 h-14 border rounded-2xl text-2xl flex items-center justify-center"
+        >
+            🛒
+        </button>
+
+        <button
+            class="flex-1 bg-red-600 text-white rounded-2xl font-bold text-lg"
+        >
+            ซื้อเลย
+        </button>
+
+    </div>
+
+</div>
+
+<div class="h-24 lg:hidden"></div>
+
+<!-- SCRIPT -->
+<script>
+
+    // CHANGE IMAGE
+    function changeImage(element){
+
+        document.getElementById("mainImage").src = element.src;
+
+        // remove active border
+        document.querySelectorAll(".thumbnail").forEach(img => {
+            img.classList.remove("border-red-500","border-2");
+            img.classList.add("border");
+        });
+
+        // add active border
+        element.classList.add("border-red-500","border-2");
+    }
+
+    // QUANTITY
+    let quantity = 1;
+
+    function increaseQty(){
+
+        quantity++;
+
+        document.getElementById("qty").innerText = quantity;
+    }
+
+    function decreaseQty(){
+
+        if(quantity > 1){
+
+            quantity--;
+
+            document.getElementById("qty").innerText = quantity;
+        }
+    }
+
+</script>
 
 </body>
 </html>

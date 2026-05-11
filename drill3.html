@@ -1,47 +1,310 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>เครื่องเป่าเศษใบไม้ไร้สาย </title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>เครื่องเป่าเศษใบไม้ไร้สาย M18 (M18F2BL-0)</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+    font-family: sans-serif;
+}
+</style>
+
 </head>
 
-<body class="bg-black text-white p-10">
+<body class="bg-[#f5f5f5] text-black">
 
-<h1 class="text-5xl font-bold text-red-500 mb-6">
-เครื่องเป่าเศษใบไม้ไร้สาย 36V M18 2824-20(M18F2BL-0)
-</h1>
+<!-- NAVBAR -->
+<header class="bg-white border-b sticky top-0 z-50">
 
-<img
-src="https://down-th.img.susercontent.com/th-11134207-81ztd-mnxzjqv085511c"
-class="w-full max-w-xl mb-8">
+    <div class="max-w-7xl mx-auto h-16 px-4 flex items-center justify-between">
 
-<p class="text-xl text-gray-300 leading-relaxed mb-6">
-เครื่องเป่าเศษใบไม้ไร้สาย Milwaukee M18 FUEL รุ่น M18 F2BL-0 (หรือ 2824-20) เป็นเครื่องเป่าลมประสิทธิภาพสูงที่ใช้ระบบแบตเตอรี่คู่ (18V x 2) ให้พลังงานเทียบเท่าเครื่องยนต์เบนซิน เหมาะสำหรับการใช้งานหนักระดับมืออาชีพ
-ข้อมูลจำเพาะทางเทคนิค (Technical Data)
-รุ่น: M18 F2BL-0 (เครื่องเปล่า)
+        <div class="flex items-center gap-3">
 
-ระบบแบตเตอรี่: M18 FUEL (ใช้แบตเตอรี่ M18 18V จำนวน 2 ก้อน)
-มอเตอร์: Brushless (ไร้แปรงถ่าน) POWERSTATE™
-ปริมาณลมสูงสุด: 17 ลูกบาศก์เมตร/นาที (Cubic Meters Per Minute - CMM)
-ความเร็วลมสูงสุด: 233 กม./ชม. (Kilometers Per Hour - km/h)
-แรงเป่าลม (Blowing Force): 17.7 นิวตัน (N)
-อัตราเร่ง: เต็มกำลังภายในเวลาไม่ถึง 1 วินาที
-น้ำหนัก: 4.8 กก. (ไม่รวมแบตเตอรี่)
-ระดับเสียง: 83 เดซิเบล
-</p>
+            <button class="text-2xl">
+                ☰
+            </button>
 
-<div class="text-3xl text-orange-400 font-bold mb-8">
-฿12,442
+            <h1 class="text-lg md:text-2xl font-bold text-red-600">
+                Tiger Swamp Tools
+            </h1>
+
+        </div>
+
+        <div class="flex items-center gap-4">
+
+            <div class="hidden md:block">
+                <input
+                    type="text"
+                    placeholder="ค้นหา"
+                    class="border rounded-xl px-4 py-2 w-64 outline-none"
+                >
+            </div>
+
+            <button class="text-2xl">
+                🛒
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- MOBILE SEARCH -->
+<div class="md:hidden bg-white px-4 py-3 border-b">
+
+    <input
+        type="text"
+        placeholder="ค้นหาสินค้า..."
+        class="w-full border rounded-xl px-4 py-3 outline-none"
+    >
+
 </div>
 
-<a
-href="index.html"
-class="bg-red-600 px-6 py-3 inline-block font-bold">
-← กลับหน้าแรก
-</a>
+<!-- MAIN -->
+<section class="max-w-7xl mx-auto px-4 py-6">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+
+        <!-- LEFT -->
+        <div>
+
+            <!-- MAIN IMAGE -->
+            <div class="bg-white rounded-2xl p-4 md:p-8 shadow-sm">
+
+                <img
+                    id="mainImage"
+                    src="https://down-th.img.susercontent.com/th-11134207-81ztd-mnxzjqv085511c"
+                    class="w-full rounded-xl object-cover transition duration-300"
+                >
+
+            </div>
+
+            <!-- THUMBNAILS -->
+            <div class="flex gap-3 mt-4 overflow-x-auto pb-2">
+
+                <img
+                    onclick="changeImage(this)"
+                    src="https://down-th.img.susercontent.com/th-11134207-81ztd-mnxzjqv085511c"
+                    class="thumbnail w-20 h-20 rounded-xl border-2 border-red-500 object-cover flex-shrink-0 cursor-pointer"
+                >
+
+                <img
+                    onclick="changeImage(this)"
+                    src="https://down-th.img.susercontent.com/th-11134207-81ztf-mnxzjqv1h3b6b2"
+                    class="thumbnail w-20 h-20 rounded-xl border object-cover flex-shrink-0 cursor-pointer"
+                >
+
+                <img
+                    onclick="changeImage(this)"
+                    src="https://down-th.img.susercontent.com/th-11134207-81zth-mnxzjqv6qpz55c"
+                    class="thumbnail w-20 h-20 rounded-xl border object-cover flex-shrink-0 cursor-pointer"
+                >
+
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="bg-white rounded-2xl p-5 md:p-8 shadow-sm mt-6">
+
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                    รายละเอียดสินค้า
+                </h2>
+
+                <div class="space-y-4 text-gray-700 leading-relaxed text-sm md:text-lg">
+
+                    <p>• ระบบแบตเตอรี่: M18 FUEL</p>
+
+                    <p>•  มอเตอร์: Brushless (ไร้แปรงถ่าน) POWERSTATE™ </p>
+
+                    <p>• ปริมาณลมสูงสุด: 17 ลูกบาศก์เมตร/นาที</p>
+
+                    <p>• ความเร็วลมสูงสุด: 233 กม./ชม.</p>
+
+                    <p>• น้ำหนัก: 4.8 กก. (ไม่รวมแบตเตอรี่)</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+
+            <div class="bg-white rounded-2xl p-5 md:p-8 shadow-sm lg:sticky lg:top-24">
+
+                <!-- TITLE -->
+                <h1 class="text-2xl md:text-4xl font-bold leading-tight">
+
+                    เครื่องเป่าเศษใบไม้ไร้สาย M18 (M18F2BL-0)
+
+                </h1>
+
+                <!-- SKU -->
+                <p class="text-gray-500 mt-3">
+                    รหัสสินค้า #TM0046
+                </p>
+
+                <!-- PRICE -->
+                <div class="flex items-center gap-4 mt-6 flex-wrap">
+
+                    <div class="text-3xl md:text-5xl font-bold text-red-600">
+
+                        ฿12,442
+
+                    </div>
+
+                    <div class="bg-red-500 text-white px-3 py-1 rounded-lg font-bold">
+
+                        -5%
+
+                    </div>
+
+                </div>
+
+                <div class="text-gray-400 line-through text-lg mt-2">
+
+                    ฿13,097
+
+                </div>
+
+                <!-- STOCK -->
+                <div class="mt-6">
+
+                    <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-xl">
+
+                        ✓ มีสินค้า พร้อมส่ง
+
+                    </div>
+
+                </div>
+
+                <!-- QUANTITY -->
+                <div class="mt-8">
+
+                    <p class="font-bold mb-4 text-lg">
+                        จำนวน
+                    </p>
+
+                    <div class="flex items-center gap-4">
+
+                        <button
+                            onclick="decreaseQty()"
+                            class="w-12 h-12 bg-gray-200 rounded-xl text-2xl hover:bg-gray-300 transition"
+                        >
+                            -
+                        </button>
+
+                        <div
+                            id="qty"
+                            class="text-2xl font-bold w-10 text-center"
+                        >
+                            1
+                        </div>
+
+                        <button
+                            onclick="increaseQty()"
+                            class="w-12 h-12 bg-gray-200 rounded-xl text-2xl hover:bg-gray-300 transition"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="space-y-4 mt-10">
+
+                    <button
+                        class="w-full bg-red-600 hover:bg-red-700 transition py-4 rounded-2xl text-lg md:text-xl font-bold text-white"
+                    >
+                        เพิ่มสินค้าลงตะกร้า
+                    </button>
+
+                    <button
+                        class="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 transition py-4 rounded-2xl text-lg md:text-xl font-bold"
+                    >
+                        ซื้อเลย
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MOBILE BUY BAR -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t p-3 z-50">
+
+    <div class="flex gap-3">
+
+        <button
+            class="w-14 h-14 border rounded-2xl text-2xl flex items-center justify-center"
+        >
+            🛒
+        </button>
+
+        <button
+            class="flex-1 bg-red-600 text-white rounded-2xl font-bold text-lg"
+        >
+            ซื้อเลย
+        </button>
+
+    </div>
+
+</div>
+
+<div class="h-24 lg:hidden"></div>
+
+<!-- SCRIPT -->
+<script>
+
+    // CHANGE IMAGE
+    function changeImage(element){
+
+        document.getElementById("mainImage").src = element.src;
+
+        // remove active border
+        document.querySelectorAll(".thumbnail").forEach(img => {
+            img.classList.remove("border-red-500","border-2");
+            img.classList.add("border");
+        });
+
+        // add active border
+        element.classList.add("border-red-500","border-2");
+    }
+
+    // QUANTITY
+    let quantity = 1;
+
+    function increaseQty(){
+
+        quantity++;
+
+        document.getElementById("qty").innerText = quantity;
+    }
+
+    function decreaseQty(){
+
+        if(quantity > 1){
+
+            quantity--;
+
+            document.getElementById("qty").innerText = quantity;
+        }
+    }
+
+</script>
 
 </body>
 </html>
