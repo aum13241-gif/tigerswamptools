@@ -1,882 +1,511 @@
 <!DOCTYPE html>
 <html class="dark" lang="th">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Tiger Swamp Tools | ร้านขายเครื่องมือช่างออนไลน์</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tiger Swamp Tools | ร้านขายเครื่องมือช่างออนไลน์</title>
 
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Hanken+Grotesk:wght@400;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Hanken+Grotesk:wght@400;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        background: "#131313",
-        primary: "#ffb3ac",
-        primaryContainer: "#d32f2f",
-        secondaryContainer: "#ff9800",
-        surface: "#1c1b1b",
-        surfaceVariant: "#353534",
-        text: "#e5e2e1",
-        muted: "#c9b4b1"
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#131313",
+            primary: "#ffb3ac",
+            primaryContainer: "#d32f2f",
+            secondaryContainer: "#ff9800",
+            surface: "#1c1b1b",
+            surfaceVariant: "#353534",
+            text: "#e5e2e1",
+            muted: "#c9b4b1"
+          }
+        }
       }
     }
-  }
-}
-</script>
+  </script>
 
-<style>
-.logo-text{
-  font-family:'Bebas Neue',sans-serif;
-  letter-spacing:3px;
-}
-  html{
-  scroll-behavior:smooth;
-}
-
-*{
-  transition:
-  background .3s ease,
-  color .3s ease,
-  border .3s ease,
-  transform .3s ease,
-  opacity .3s ease;
-} 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48;
-}
-
-body{
-  background:#131313;
-  color:#e5e2e1;
-  font-family:'Hanken Grotesk',sans-serif;
-}
-
-.industrial-grid{
-  background-image:
-  radial-gradient(circle,#353534 1px,transparent 1px);
-  background-size:32px 32px;
-}
-
-.hero-overlay{
-  .hero-glow{
-  position:absolute;
-  width:700px;
-  height:700px;
-  background:rgba(211,47,47,.25);
-  filter:blur(140px);
-  border-radius:999px;
-  top:-200px;
-  right:-150px;
-}
-  background:
-  linear-gradient(
-    to right,
-    rgba(19,19,19,1),
-    rgba(19,19,19,.85),
-    rgba(19,19,19,.2)
-  );
-}
-
-.btn-main{
-  background:#ff9800;
-  color:#653900;
-  padding:16px 32px;
-  font-weight:700;
-  text-transform:uppercase;
-  transition:.3s;
-  clip-path: polygon(0 0, 88% 0, 100% 20%, 100% 100%, 0 100%);
-}
-
-.btn-main:hover{
-  .btn-main{
-  position:relative;
-  overflow:hidden;
-}
-
-.btn-main::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:-120%;
-  width:100%;
-  height:100%;
-  background:
-  linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,.4),
-    transparent
-  );
-  transition:.7s;
-}
-
-.btn-main:hover::before{
-  left:120%;
-}
-  transform:scale(1.05);
-  filter:brightness(1.1);
-}
-
-.btn-outline{
-  border:2px solid #d32f2f;
-  color:#ffb3ac;
-  padding:16px 32px;
-  font-weight:700;
-  text-transform:uppercase;
-  transition:.3s;
-}
-
-.btn-outline:hover{
-  background:rgba(211,47,47,.15);
-}
-
-.card{
-  background:#1c1b1b;
-  border:1px solid #353534;
-  overflow:hidden;
-  transition:.4s;
-}
-
-.card img{
-  transition:.7s;
-}
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:
-  0 20px 40px rgba(0,0,0,.45),
-  0 0 20px rgba(211,47,47,.2);
-}
-
-.card:hover img{
-  transform:scale(1.1);
-}
-
-
-.card-overlay{
-  background:
-  linear-gradient(
-    to top,
-    rgba(19,19,19,.95),
-    transparent
-  );
-}
-
-.section-title{
-  font-family:'Bebas Neue',sans-serif;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font-size:58px;
-  line-height:1;
-}
-
-
-.highlight{
-  color:#d32f2f;
-}
-
-.nav-link{
-  font-family:'Bebas Neue',sans-serif;
-letter-spacing:1px;
-font-size:20px;
-  transition:.3s;
-  text-transform:uppercase;
-  font-weight:700;
-}
-
-.nav-link:hover{
-  color:#ffb3ac;
-}
-
-.brand-card{
-  background:white;
-  padding:24px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  filter:grayscale(100%);
-  transition:.3s;
-}
-
-.brand-card:hover{
-  filter:grayscale(0);
-}
-
-.contact-box{
-  background:#1c1b1b;
-  border-right:4px solid #d32f2f;
-}
-
-.fab{
-  position:fixed;
-  right:32px;
-  bottom:32px;
-  width:60px;
-  height:60px;
-  border-radius:999px;
-  background:#ff9800;
-  color:#653900;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
-  transition:.3s;
-}
-
-.fab:hover{
-  transform:scale(1.1);
-  .hero-title{
-  font-family:'Bebas Neue',sans-serif;
-  letter-spacing:4px;
-  line-height:.9;
-}
-  .loader{
-  position:fixed;
-  inset:0;
-  background:#131313;
-  z-index:99999;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  transition:opacity .8s ease, visibility .8s ease;
-}
-
-.loader::before{
-  content:'';
-  position:absolute;
-  width:500px;
-  height:500px;
-  background:
-  radial-gradient(
-    circle,
-    rgba(211,47,47,.25),
-    transparent 70%
-  );
-
-  filter:blur(60px);
-
-  animation:
-  pulseGlow 3s infinite ease-in-out;
-}
-
-.loader.hidden{
-  opacity:0;
-  visibility:hidden;
-}
-
-.loader-logo{
-  text-align:center;
-padding:0 20px;
-@media(max-width:768px){
-
-  .loader-logo{
-    font-size:54px;
-  }
-
-}
-  font-family:'Bebas Neue',sans-serif;
-  font-size:90px;
-  color:#d32f2f;
-  letter-spacing:6px;
-  margin-bottom:30px;
-
-  opacity:0;
-  transform:
-  scale(.7)
-  translateY(40px);
-
-  animation:
-  logoReveal 1.8s ease forwards;
-
-  text-shadow:
-  0 0 10px rgba(211,47,47,.5),
-  0 0 30px rgba(211,47,47,.4),
-  0 0 60px rgba(211,47,47,.3);
-}
-}
-
-.loader-spinner{
-  width:80px;
-  height:80px;
-  border:5px solid rgba(255,255,255,.1);
-  border-top:5px solid #ff9800;
-  border-radius:999px;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes pulseGlow{
-  0%{
-    transform:scale(1);
-    opacity:.5;
-  }
-
-  50%{
-    transform:scale(1.2);
-    opacity:1;
-  }
-
-  100%{
-    transform:scale(1);
-    opacity:.5;
-  }
-}
-
-@keyframes spin{
-  to{
-    transform:rotate(360deg);
-  }
-}
-
-@keyframes logoReveal{
-  0%{
-    opacity:0;
-    transform:
-    scale(.6)
-    translateY(60px);
-    letter-spacing:20px;
-    filter:blur(10px);
-  }
-
-  60%{
-    opacity:1;
-    transform:
-    scale(1.05)
-    translateY(0);
-    letter-spacing:8px;
-    filter:blur(0);
-  }
-
-  100%{
-    opacity:1;
-    transform:
-    scale(1)
-    translateY(0);
-    letter-spacing:6px;
-    filter:blur(0);
-  }
-}
-  to{
-    transform:rotate(360deg);
-  }
-  to{
-    transform:rotate(360deg);
-  }
-
-</style>
+  <style>
+    .logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 3px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      transition: background .3s ease, color .3s ease, border .3s ease, transform .3s ease, opacity .3s ease;
+    } 
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    }
+    body {
+      background: #131313;
+      color: #e5e2e1;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .industrial-grid {
+      background-image: radial-gradient(circle, #353534 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(19,19,19,1), rgba(19,19,19,.85), rgba(19,19,19,.2));
+    }
+    .hero-glow {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      background: rgba(211,47,47,.25);
+      filter: blur(140px);
+      border-radius: 999px;
+      top: -200px;
+      right: -150px;
+    }
+    .btn-main {
+      background: #ff9800;
+      color: #653900;
+      padding: 16px 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: .3s;
+      clip-path: polygon(0 0, 88% 0, 100% 20%, 100% 100%, 0 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.4), transparent);
+      transition: .7s;
+    }
+    .btn-main:hover::before {
+      left: 120%;
+    }
+    .btn-main:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+    .btn-outline {
+      border: 2px solid #d32f2f;
+      color: #ffb3ac;
+      padding: 16px 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+    .btn-outline:hover {
+      background: rgba(211,47,47,.15);
+    }
+    .card {
+      background: #1c1b1b;
+      border: 1px solid #353534;
+      overflow: hidden;
+      transition: .4s;
+    }
+    .card img {
+      transition: .7s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.45), 0 0 20px rgba(211,47,47,.2);
+    }
+    .card:hover img {
+      transform: scale(1.1);
+    }
+    .card-overlay {
+      background: linear-gradient(to top, rgba(19,19,19,.95), transparent);
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 58px;
+      line-height: 1;
+    }
+    .highlight {
+      color: #d32f2f;
+    }
+    .nav-link {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+      font-size: 20px;
+      transition: .3s;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .nav-link:hover {
+      color: #ffb3ac;
+    }
+    .brand-card {
+      background: white;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: grayscale(100%);
+      transition: .3s;
+    }
+    .brand-card:hover {
+      filter: grayscale(0);
+    }
+    .fab {
+      position: fixed;
+      right: 32px;
+      bottom: 32px;
+      width: 60px;
+      height: 60px;
+      border-radius: 999px;
+      background: #ff9800;
+      color: #653900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,.4);
+      transition: .3s;
+      z-index: 40;
+    }
+    .fab:hover {
+      transform: scale(1.1);
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 4px;
+      line-height: .9;
+    }
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: #131313;
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity .8s ease, visibility .8s ease;
+    }
+    .loader::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(211,47,47,.25), transparent 70%);
+      filter: blur(60px);
+      animation: pulseGlow 3s infinite ease-in-out;
+    }
+    .loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader-logo {
+      text-align: center;
+      padding: 0 20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 90px;
+      color: #d32f2f;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: scale(.7) translateY(40px);
+      animation: logoReveal 1.8s ease forwards;
+      text-shadow: 0 0 10px rgba(211,47,47,.5), 0 0 30px rgba(211,47,47,.4), 0 0 60px rgba(211,47,47,.3);
+    }
+    @media(max-width:768px){
+      .loader-logo { font-size: 54px; }
+    }
+    .loader-spinner {
+      width: 80px;
+      height: 80px;
+      border: 5px solid rgba(255,255,255,.1);
+      border-top: 5px solid #ff9800;
+      border-radius: 999px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: .5; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes logoReveal {
+      0% { opacity: 0; transform: scale(.6) translateY(60px); letter-spacing: 20px; filter: blur(10px); }
+      60% { opacity: 1; transform: scale(1.05) translateY(0); letter-spacing: 8px; filter: blur(0); }
+      100% { opacity: 1; transform: scale(1) translateY(0); letter-spacing: 6px; filter: blur(0); }
+    }
+  </style>
 </head>
 
-
 <body class="industrial-grid">
+
   <!-- LOADING SCREEN -->
-<div class="loader" id="loader">
-
-<div class="loader-logo">
-Tiger Swamp Tools
-</div>
-
-<div class="loader-spinner"></div>
-
-</div>
-
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-red-900 px-10 py-4 flex justify-between items-center">
-
-<div class="flex items-center gap-10">
-<h1 class="text-5xl tracking-wider text-red-400 logo-text">
-Tiger Swamp Tools
-</h1>
-
-<nav class="hidden lg:flex gap-6">
-<a class="nav-link text-red-300" href="#">หน้าแรก</a>
-<a class="nav-link" href="#">เครื่องมือช่าง</a>
-<a class="nav-link" href="#brands"> แบรนด์สินค้า</a>
-<a class="nav-link" href="#">ติดต่อเรา</a>
-<a class="nav-link" href="#">ล็อกอิน</a>
-</nav>
-</div>
-
-<div class="flex items-center gap-4">
-<input
-class="bg-[#1c1b1b] border border-[#353534] px-4 py-2"
-placeholder="ค้นหาเครื่องมือ..."
-type="text">
-
-<span class="material-symbols-outlined cursor-pointer">
-search
-</span>
-</div>
-
-</header>
-
-<!-- HERO -->
-<section class="relative h-screen overflow-hidden flex items-center">
-
-<img
-class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
-src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1800&auto=format&fit=crop">
-
-<div class="absolute inset-0 hero-overlay"></div>
-<div class="hero-glow"></div>
-
-<div class="relative z-10 max-w-4xl px-12">
-
-<div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-6">
-ร้านขายเครื่องมือช่างคุณภาพสูง
-</div>
-
-<h2 class="hero-title text-5xl md:text-8xl uppercase mb-6 leading-none">
-Tiger Swamp
-<span class="highlight">Tools</span>
-</h2>
-
-<p class="text-xl text-gray-300 mb-10 leading-relaxed">
-เครื่องมือและอุปกรณ์งานช่างระดับมืออาชีพ
-สำหรับงานอุตสาหกรรม งานก่อสร้าง และงานหนักทุกประเภท
-</p>
-
-<div class="flex gap-4">
-<a 
-class="btn-main inline-block"
-href="https://heyzine.com/flip-book/558e502ac4.html"
-target="_blank"
->
-ดูแคตตาล็อก
-</a>
-<button class="btn-outline">แบรนด์สินค้าของเรา</button>
-</div>
-
-</div>
-</section>
-
-<!-- MILWAUKEE PRODUCTS -->
-<section class="py-20 px-10">
-
-<div class="text-center mb-14">
-<h2 class="section-title">
-เครื่องมือ <span class="highlight">Milwaukee</span>
-</h2>
-
-<p class="uppercase tracking-widest text-gray-400 mt-4">
-เครื่องมือระดับมืออาชีพ แข็งแรง ทนทาน พร้อมลุยทุกงาน
-</p>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-<!-- PRODUCT 1 -->
-<div class="card">
-
-<img
-class="w-full h-64 object-cover"
-src="https://down-th.img.susercontent.com/th-11134207-81ztj-mnwmqtr7ffnsb0">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3 text-red-400">
-เครื่องอัดจารบีไร้สาย 18 โวลต์​ M18 GG-0
-</h3>
-
-<p class="text-gray-300 mb-5">
-แรงดันสูงสุด 690 บาร์ในระดับที่ใช้ในอุตสาหกรรม
-
-</p>
-
-<a 
-href="drill.html"
-class="btn-main w-full text-center block">
-ดูรายละเอียด
-</a>
-
-</div>
-</div>
-
-<!-- PRODUCT 2 -->
-<div class="card">
-
-<img
-class="w-full h-64 object-cover"
-src="https://down-th.img.susercontent.com/th-11134207-81ztc-mnwf67pc25fl24">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3 text-red-400">
-
-สว่านแท่นแม่เหล็กไร้สาย Milwaukee M18 FMDP-0C0
-</h3>
-
-<p class="text-gray-300 mb-5">
-สว่านกำลังสูง สำหรับงานเจาะและงานอุตสาหกรรม 
-</p>
-
-<a 
-href="drill2.html"
-class="btn-main w-full text-center block">
-ดูรายละเอียด
-</a>
-
-</div>
-</div>
-
-<!-- PRODUCT 3 -->
-<div class="card">
-
-<img
-class="w-full h-64 object-cover"
-src="https://down-th.img.susercontent.com/th-11134207-81ztd-mnxzjqv085511c">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3 text-red-400">
-เครื่องเป่าเศษใบไม้ไร้สาย 36V M18 2824-20
-</h3>
-
-<p class="text-gray-300 mb-5">
-เป็นเครื่องเป่าลมประสิทธิภาพสูงที่ใช้ระบบแบตเตอรี่คู่เหมาะสำหรับการใช้งานหนักระดับมืออาชีพ 
-</p>
-
-<a 
-href="drill3.html"
-class="btn-main w-full text-center block">
-ดูรายละเอียด
-</a>
-
-</div>
-</div>
-
-<!-- PRODUCT 4 -->
-<div class="card">
-
-<img
-class="w-full h-64 object-cover"
-src="https://down-th.img.susercontent.com/th-11134207-81zte-mny1jeoo6w3m7a">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3 text-red-400">
-ปั๊มสุญญากาศ MILWAUKEE M18 FVP5-0
-</h3>
-
-<p class="text-gray-300 mb-5">
-การทำงานด้วยแบตเตอรี่ช่วยกำจัดสายไฟรุงรัง ใช้งานได้ทันใจสร้างสูญญากาศได้เร็วขึ้น; เพิ่มความเร็วและระยะเวลาใช้งานด้วยระบบ Manifold Mode
-</p>
-
-<a 
-href="drill4.html"
-class="btn-main w-full text-center block">
-ดูรายละเอียด
-</a>
-
-</div>
-</div>
-
-</div>
-</section>
-<!-- CATEGORY -->
-<section class="py-20 px-10 bg-[#1c1b1b]">
-
-<div class="text-center mb-16">
-<h2 class="section-title">
-หมวดหมู่ <span class="highlight">สินค้า</span>
-</h2>
-
-<p class="uppercase tracking-widest text-gray-400 mt-4">
-อุปกรณ์คุณภาพสูงสำหรับมืออาชีพ
-</p>
-</div>
-
-<div class="grid lg:grid-cols-2 gap-8">
-
-<!-- CARD -->
-<div class="card relative h-[450px]">
-<img
-class="w-full h-full object-cover opacity-70"
-src="https://www.milwaukeetool.in.th/media/wysiwyg/homepage/M18_FMTIW2F12--App09.jpg">
-
-<div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
-
-<div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-4 w-fit">
-ตัวแทนจำหน่ายอันดับ 1 จังหวัดปทุมธานี
-</div>
-
-<h3 class="text-4xl font-bold mb-4">
-ศูนย์ตัวแทนจำหน่าย<br>
-<span class="text-cyan-400">Tiger Swamp Tools</span>
-</h3>
-
-<p class="text-gray-300 mb-4 leading-relaxed">
-ตัวแทนจำหน่ายเครื่องมือช่างและเครื่องมือไฟฟ้าคุณภาพสูง
-ที่ได้รับความไว้วางใจจากช่างมืออาชีพ โรงงานอุตสาหกรรม
-และผู้รับเหมาในจังหวัดปทุมธานี พร้อมสินค้าของแท้และบริการครบวงจร
-</p>
-
-<div class="flex items-center gap-3 text-orange-400 font-bold uppercase tracking-wider">
-<span class="material-symbols-outlined">
-verified
-</span>
-ศูนย์จำหน่ายมาตรฐานมืออาชีพ
-</div>
-
-<a class="mt-5 text-red-400 uppercase font-bold flex items-center gap-2" href="#">
-ดูข้อมูลเพิ่มเติม →
-</a>
-
-</div>
-</div>
-<!-- CARD -->
-<div class="card relative h-[450px]">
-
-<img
-class="w-full h-full object-cover opacity-70"
-src="https://static.summitracing.com/global/images/prod/xlarge/mwt-2960-20_kk_xl.jpg">
-
-<div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
-
-<h3 class="text-4xl font-bold mb-4">
-เครื่องมือช่าง
-</h3>
-
-<p class="text-gray-300 mb-4">
-ประแจ คีม และอุปกรณ์งานช่างคุณภาพสูง
-</p>
-
-<a class="text-red-400 uppercase font-bold" href="#">
-ดูหมวดหมู่ →
-</a>
-
-</div>
-</div>
-
-</div>
-</section>
-</section>
-
-<!-- BRANDS -->
-<section id="brands" class="py-20 px-10">
-
-<div class="text-center mb-16">
-
-<h2 class="section-title">
-แบรนด์ <span class="highlight">สินค้า</span>
-</h2>
-
-<p class="uppercase tracking-widest text-gray-400 mt-4">
-เลือกแบรนด์เครื่องมือระดับมืออาชีพ
-</p>
-
-</div>
-
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-<!-- MILWAUKEE -->
-<a
-href="brand-milwaukee.html"
-class="brand-card rounded-2xl hover:scale-105"
->
-
-<img
-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkW8u2C2W-zy4aCjAs_-c47kTS57DLxRkAww&s"
-class="h-16 object-contain"
->
-
-</a>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<!-- CONTACT & NEW PRODUCT -->
-<section class="py-20 px-10">
-  <div class="max-w-7xl mx-auto">
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-      
-      <!-- ฝั่งซ้าย: ข้อมูลติดต่อ + แผนที่ Google Maps -->
-      <div class="flex flex-col gap-8">
+  <div class="loader" id="loader">
+    <div class="loader-logo">Tiger Swamp Tools</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-red-900 px-10 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-10">
+      <h1 class="text-5xl tracking-wider text-red-400 logo-text">Tiger Swamp Tools</h1>
+      <nav class="hidden lg:flex gap-6">
+        <a class="nav-link text-red-300" href="#">หน้าแรก</a>
+        <a class="nav-link" href="#">เครื่องมือช่าง</a>
+        <a class="nav-link" href="#brands">แบรนด์สินค้า</a>
+        <a class="nav-link" href="#contact">ติดต่อเรา</a>
+        <a class="nav-link" href="#">ล็อกอิน</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-4">
+      <input class="bg-[#1c1b1b] border border-[#353534] px-4 py-2" placeholder="ค้นหาเครื่องมือ..." type="text">
+      <span class="material-symbols-outlined cursor-pointer">search</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative h-screen overflow-hidden flex items-center">
+    <img class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1800&auto=format&fit=crop">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="hero-glow"></div>
+    <div class="relative z-10 max-w-4xl px-12">
+      <div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-6">ร้านขายเครื่องมือช่างคุณภาพสูง</div>
+      <h2 class="hero-title text-5xl md:text-8xl uppercase mb-6 leading-none">Tiger Swamp <span class="highlight">Tools</span></h2>
+      <p class="text-xl text-gray-300 mb-10 leading-relaxed">เครื่องมือและอุปกรณ์งานช่างระดับมืออาชีพ สำหรับงานอุตสาหกรรม งานก่อสร้าง และงานหนักทุกประเภท</p>
+      <div class="flex gap-4">
+        <a class="btn-main inline-block" href="https://heyzine.com/flip-book/558e502ac4.html" target="_blank">ดูแคตตาล็อก</a>
+        <a href="#brands" class="btn-outline flex items-center justify-center">แบรนด์สินค้าของเรา</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILWAUKEE PRODUCTS -->
+  <section class="py-20 px-10">
+    <div class="text-center mb-14">
+      <h2 class="section-title">เครื่องมือ <span class="highlight">Milwaukee</span></h2>
+      <p class="uppercase tracking-widest text-gray-400 mt-4">เครื่องมือระดับมืออาชีพ แข็งแรง ทนทาน พร้อมลุยทุกงาน</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- PRODUCT 1 -->
+      <div class="card">
+        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81ztj-mnwmqtr7ffnsb0">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-3 text-red-400">เครื่องอัดจารบีไร้สาย 18 โวลต์ M18 GG-0</h3>
+          <p class="text-gray-300 mb-5">แรงดันสูงสุด 690 บาร์ในระดับที่ใช้ในอุตสาหกรรม</p>
+          <a href="drill.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="card">
+        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81ztc-mnwf67pc25fl24">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-3 text-red-400">สว่านแท่นแม่เหล็กไร้สาย M18 FMDP-0C0</h3>
+          <p class="text-gray-300 mb-5">สว่านกำลังสูง สำหรับงานเจาะและงานอุตสาหกรรม</p>
+          <a href="drill2.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="card">
+        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81ztd-mnxzjqv085511c">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-3 text-red-400">เครื่องเป่าเศษใบไม้ไร้สาย 36V M18 2824-20</h3>
+          <p class="text-gray-300 mb-5">เป็นเครื่องเป่าลมประสิทธิภาพสูงที่ใช้ระบบแบตเตอรี่คู่เหมาะสำหรับการใช้งานหนัก</p>
+          <a href="drill3.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div class="card">
+        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81zte-mny1jeoo6w3m7a">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-3 text-red-400">ปั๊มสุญญากาศ MILWAUKEE M18 FVP5-0</h3>
+          <p class="text-gray-300 mb-5">กำจัดสายไฟรุงรัง สร้างสูญญากาศได้เร็วขึ้นด้วยระบบ Manifold Mode</p>
+          <a href="drill4.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY -->
+  <section class="py-20 px-10 bg-[#1c1b1b]">
+    <div class="text-center mb-16">
+      <h2 class="section-title">หมวดหมู่ <span class="highlight">สินค้า</span></h2>
+      <p class="uppercase tracking-widest text-gray-400 mt-4">อุปกรณ์คุณภาพสูงสำหรับมืออาชีพ</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- CARD 1 -->
+      <div class="card relative h-[450px]">
+        <img class="w-full h-full object-cover opacity-70" src="https://www.milwaukeetool.in.th/media/wysiwyg/homepage/M18_FMTIW2F12--App09.jpg">
+        <div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
+          <div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-4 w-fit">ตัวแทนจำหน่ายอันดับ 1 จังหวัดปทุมธานี</div>
+          <h3 class="text-4xl font-bold mb-4">ศูนย์ตัวแทนจำหน่าย<br><span class="text-cyan-400">Tiger Swamp Tools</span></h3>
+          <p class="text-gray-300 mb-4 leading-relaxed">ตัวแทนจำหน่ายเครื่องมือช่างและเครื่องมือไฟฟ้าคุณภาพสูง ที่ได้รับความไว้วางใจในจังหวัดปทุมธานี พร้อมบริการครบวงจร</p>
+          <div class="flex items-center gap-3 text-orange-400 font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined">verified</span>ศูนย์จำหน่ายมาตรฐานมืออาชีพ
+          </div>
+          <a class="mt-5 text-red-400 uppercase font-bold flex items-center gap-2" href="#">ดูข้อมูลเพิ่มเติม →</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card relative h-[450px]">
+        <img class="w-full h-full object-cover opacity-70" src="https://static.summitracing.com/global/images/prod/xlarge/mwt-2960-20_kk_xl.jpg">
+        <div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
+          <h3 class="text-4xl font-bold mb-4">เครื่องมือช่าง</h3>
+          <p class="text-gray-300 mb-4">ประแจ คีม และอุปกรณ์งานช่างคุณภาพสูง</p>
+          <a class="text-red-400 uppercase font-bold" href="#">ดูหมวดหมู่ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW PRODUCT COMING SOON (ย้ายขึ้นมาอยู่ตรงนี้ตามคำขอ) -->
+  <section class="py-20 px-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="card p-8 flex flex-col justify-between bg-[#1c1b1b] rounded-xl border border-[#353534]">
+        <div class="relative bg-black/40 rounded-lg p-6 flex justify-center items-center overflow-hidden border border-[#353534]/60">
+          <!-- ป้าย Coming Soon ซ้อนอยู่ด้านบนของกรอบรูปภาพ -->
+          <div class="absolute top-4 left-4 bg-gradient-to-r from-orange-600 to-amber-500 text-white px-4 py-1.5 uppercase tracking-widest font-black text-xs rounded shadow-lg z-10">
+            🔥 สินค้าใหม่ Coming Soon
+          </div>
+          <!-- รูปภาพตู้เชื่อมผ่าน Direct Link -->
+          <img src="https://i.ibb.co/FbWJfpBY/S-27484163.jpg" alt="Tiger Swamp Arc" class="max-h-[380px] object-contain rounded-md drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
+        </div>
+        
+        <div class="text-center mt-6">
+          <h3 class="text-4xl font-black tracking-wider text-white logo-text mb-2">TIGER SWAMP ARC</h3>
+          <p class="text-2xl font-bold text-red-500 tracking-wide mb-2">MMA-300</p>
+          <p class="text-gray-400 text-sm">เครื่องเชื่อมแรง ทนทาน คุ้มค่า สัมผัสความแรงเร็ว ๆ นี้</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section id="brands" class="py-20 px-10 bg-[#131313]">
+    <div class="text-center mb-16">
+      <h2 class="section-title">แบรนด์ <span class="highlight">สินค้า</span></h2>
+      <p class="uppercase tracking-widest text-gray-400 mt-4">เลือกแบรนด์เครื่องมือระดับมืออาชีพ</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <!-- MILWAUKEE -->
+      <a href="brand-milwaukee.html" class="brand-card rounded-2xl hover:scale-105">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkW8u2C2W-zy4aCjAs_-c47kTS57DLxRkAww&s" class="h-16 object-contain">
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 px-10 bg-[#1c1b1b]">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
         
         <!-- ข้อมูลติดต่อ -->
-        <div class="bg-[#1c1b1b] p-8 rounded-xl border border-[#353534]">
-          <h2 class="section-title mb-6" style="font-size: 42px;">
-            ติดต่อ <span class="highlight">เรา</span>
-          </h2>
-          
-          <div class="space-y-6">
-            <div>
-              <h4 class="font-bold uppercase text-red-300 mb-1 text-lg">🚩 ที่ตั้งร้าน</h4>
-              <p class="text-gray-300 text-sm">58 หมู่ 11 ตำบลบึงบา อำเภอหนองเสือ จังหวัดปทุมธานี 12170</p>
-            </div>
-            
-            <div>
-              <h4 class="font-bold uppercase text-red-300 mb-1 text-lg">📞 เบอร์โทรศัพท์และอีเมล</h4>
-              <p class="text-gray-300 text-sm">094-393-3144 / 062-564-1224</p>
-              <p class="text-gray-500 text-xs mt-1">EMAIL : subin.210443@gmail.com</p>
-            </div>
-            
-            <div>
-              <h4 class="font-bold uppercase text-red-300 mb-3 text-lg">📱 โซเชียลมีเดีย</h4>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <a href="https://www.facebook.com/profile.php?id=61585347449896" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-blue-600 transition font-bold uppercase text-center text-xs">Facebook</a>
-                <a href="https://shopee.co.th/tigerswamptoolss_2026?entryPoint=ShopBySearch&searchKeyword=tigerswamptools" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-orange-500 transition font-bold uppercase text-center text-xs">Shopee</a>
-                <a href="https://www.lazada.co.th/" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-purple-600 transition font-bold uppercase text-center text-xs">Lazada</a>
-                <a href="https://vt.tiktok.com/ZS93hSDF6/?page=TikTokShop" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-pink-500 transition font-bold uppercase text-center text-xs">TikTok</a>
+        <div class="bg-[#131313] p-8 rounded-xl border border-[#353534] flex flex-col justify-between">
+          <div>
+            <h2 class="section-title mb-6" style="font-size: 42px;">ติดต่อ <span class="highlight">เรา</span></h2>
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-bold uppercase text-red-300 mb-1 text-lg">🚩 ที่ตั้งร้าน</h4>
+                <p class="text-gray-300 text-sm">58 หมู่ 11 ตำบลบึงบา อำเภอหนองเสือ จังหวัดปทุมธานี 12170</p>
               </div>
+              <div>
+                <h4 class="font-bold uppercase text-red-300 mb-1 text-lg">📞 เบอร์โทรศัพท์และอีเมล</h4>
+                <p class="text-gray-300 text-sm">094-393-3144 / 062-564-1224</p>
+                <p class="text-gray-500 text-xs mt-1">EMAIL : subin.210443@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <h4 class="font-bold uppercase text-red-300 mb-3 text-lg">📱 โซเชียลมีเดีย</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <a href="https://www.facebook.com/profile.php?id=61585347449896" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-blue-600 transition font-bold uppercase text-center text-xs text-white">Facebook</a>
+              <a href="https://shopee.co.th/tigerswamptoolss_2026?entryPoint=ShopBySearch&searchKeyword=tigerswamptools" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-orange-500 transition font-bold uppercase text-center text-xs text-white">Shopee</a>
+              <a href="https://www.lazada.co.th/" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-purple-600 transition font-bold uppercase text-center text-xs text-white">Lazada</a>
+              <a href="https://vt.tiktok.com/ZS93hSDF6/?page=TikTokShop" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-pink-500 transition font-bold uppercase text-center text-xs text-white">TikTok</a>
             </div>
           </div>
         </div>
         
         <!-- แผนที่ Google Maps -->
-        <div class="relative overflow-hidden border-4 border-[#353534] rounded-xl flex-1 min-h-[350px]">
-          <iframe
-            class="absolute inset-0 w-full h-full"
-            src="https://www.google.com/maps?q=58%20หมู่%2011%20ตำบลบึงบา%20อำเภอหนองเสือ%20จังหวัดปทุมธานี%2012170&output=embed"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="relative overflow-hidden border-4 border-[#353534] rounded-xl min-h-[400px]">
+          <iframe class="absolute inset-0 w-full h-full" src="https://www.google.com/maps?q=58%20หมู่%2011%20ตำบลบึงบา%20อำเภอหนองเสือ%20จังหวัดปทุมธานี%2012170&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
-          <a href="https://www.google.com/maps/dir//58+Tiger+Swamp+Tools+s.+%E0%B  8%95%E0%B8%B1%E0%B8%A2%E0%B8%A5+%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B1%E0%B8%87+%E0%B8%B0%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD+%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD+%E0%B8%9F%E0%B8%B2%E0%B8%97%E0%B8%B8%E0%B8%A1%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5+12170/@14.111472,100.846691,15z" target="_blank" class="absolute bottom-4 left-4 bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2.5 uppercase tracking-wider transition z-10 text-xs">
-            เปิดใน Google Maps →
-          </a>
+          <a href="https://www.google.com/maps/dir//58+Tiger+Swamp+Tools" target="_blank" class="absolute bottom-4 left-4 bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2.5 uppercase tracking-wider transition z-10 text-xs">เปิดใน Google Maps →</a>
         </div>
-        
+
       </div>
-      
-      <!-- ฝั่งขวา: สินค้าใหม่ Coming Soon (อยู่ขวาแบบเต็ม ๆ ไม่เบียดใคร) -->
-      <div class="card p-8 flex flex-col justify-between bg-[#1c1b1b] rounded-xl border border-[#353534]">
-        <div>
-          <div class="bg-orange-600 text-white inline-block px-4 py-2 uppercase tracking-widest mb-6 font-bold text-sm w-full text-center">
-            สินค้าใหม่ Coming Soon
-          </div>
-          <div class="flex justify-center items-center py-4">
-            <img src="<a href="https://ibb.co/MDhpjdR1"><img src="https://i.ibb.co/FbWJfpBY/S-27484163.jpg" alt="S-27484163" border="0"></a>
-          </div>
-        </div>
-        
-        <div class="text-center mt-6">
-          <h3 class="text-4xl font-black tracking-wider text-white logo-text mb-2">
-            TIGER SWAMP ARC
-          </h3>
-          <p class="text-2xl font-bold text-red-500 tracking-wide mb-2">MMA-300</p>
-          <p class="text-gray-400 text-sm">เครื่องเชื่อมแรง ทนทาน คุ้มค่า สัมผัสความแรงเร็ว ๆ นี้</p>
-        </div>
-      </div>
-      
     </div>
-    
-  </div>
-</section>
-</a>
+  </section>
 
-</div>
+  <!-- FOOTER -->
+  <footer class="bg-black py-16 px-10 border-t-4 border-orange-500">
+    <div class="grid md:grid-cols-4 gap-10">
+      <div>
+        <h3 class="text-3xl font-black italic text-red-400 mb-4">Tiger Swamp Tools</h3>
+        <p class="text-gray-500">ร้านจำหน่ายเครื่องมือช่างและอุปกรณ์อุตสาหกรรมคุณภาพสูง</p>
+      </div>
+      <div>
+        <h4 class="uppercase font-bold text-red-300 mb-4">สินค้า</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>เครื่องมือไฟฟ้า</li>
+          <li>เครื่องมือช่าง</li>
+          <li>อุปกรณ์เซฟตี้</li>
+          <li>แบรนด์สินค้า</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="uppercase font-bold text-red-300 mb-4">บริการลูกค้า</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>ฝ่ายเทคนิค</li>
+          <li>นโยบายรับประกัน</li>
+          <li>ข้อมูลการจัดส่ง</li>
+          <li>ค้นหาสาขา</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="uppercase font-bold text-red-300 mb-4">มาตรฐานอุตสาหกรรม</h4>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-[#1c1b1b] p-4 text-center border border-[#353534]">
+            <div class="text-2xl font-bold">ISO</div>
+            <div class="text-xs">9001:2015</div>
+          </div>
+          <div class="bg-[#1c1b1b] p-4 text-center border border-[#353534]">
+            <div class="text-2xl font-bold">OSHA</div>
+            <div class="text-xs">ผ่านมาตรฐาน</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-gray-500 mt-12 text-sm">© 2026 Tiger Swamp Tools สงวนลิขสิทธิ์ทั้งหมด</p>
+  </footer>
 
-</section>
+  <!-- FAB (Messenger) -->
+  <a href="https://m.me/61585347449896" target="_blank" class="fab">
+    <span class="material-symbols-outlined">chat_bubble</span>
+  </a>
 
-<!-- FOOTER -->
-<footer class="bg-black py-16 px-10 border-t-4 border-orange-500">
-
-<div class="grid md:grid-cols-4 gap-10">
-
-<div>
-<h3 class="text-3xl font-black italic text-red-400 mb-4">
-Tiger Swamp Tools
-</h3>
-
-<p class="text-gray-500">
-ร้านจำหน่ายเครื่องมือช่างและอุปกรณ์อุตสาหกรรมคุณภาพสูง
-</p>
-</div>
-
-<div>
-<h4 class="uppercase font-bold text-red-300 mb-4">
-สินค้า
-</h4>
-
-<ul class="space-y-2 text-gray-400">
-<li>เครื่องมือไฟฟ้า</li>
-<li>เครื่องมือช่าง</li>
-<li>อุปกรณ์เซฟตี้</li>
-<li>แบรนด์สินค้า</li>
-</ul>
-</div>
-
-<div>
-<h4 class="uppercase font-bold text-red-300 mb-4">
-บริการลูกค้า
-</h4>
-
-<ul class="space-y-2 text-gray-400">
-<li>ฝ่ายเทคนิค</li>
-<li>นโยบายรับประกัน</li>
-<li>ข้อมูลการจัดส่ง</li>
-<li>ค้นหาสาขา</li>
-</ul>
-</div>
-
-<div>
-<h4 class="uppercase font-bold text-red-300 mb-4">
-มาตรฐานอุตสาหกรรม
-</h4>
-
-<div class="grid grid-cols-2 gap-4">
-
-<div class="bg-[#1c1b1b] p-4 text-center border border-[#353534]">
-<div class="text-2xl font-bold">ISO</div>
-<div class="text-xs">9001:2015</div>
-</div>
-
-<div class="bg-[#1c1b1b] p-4 text-center border border-[#353534]">
-<div class="text-2xl font-bold">OSHA</div>
-<div class="text-xs">ผ่านมาตรฐาน</div>
-</div>
-
-</div>
-</div>
-
-</div>
-
-<p class="text-center text-gray-500 mt-12 text-sm">
-© 2024 Tiger Swamp Tools สงวนลิขสิทธิ์ทั้งหมด
-</p>
-
-</footer>
-
-<!-- FAB -->
-<a 
-href="https://m.me/61585347449896"
-target="_blank"
-class="fab"
->
-<span class="material-symbols-outlined">
-chat_bubble
-</span>
-</a>
-<span class="material-symbols-outlined">
-chat_bubble
-</span>
-</button>
-<script>
-window.addEventListener("load", () => {
-
-  const loader = document.getElementById("loader");
-
-  setTimeout(() => {
-    loader.classList.add("hidden");
-  }, 1200);
-
-});
-</script>
+  <!-- SCRIPT -->
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      setTimeout(() => {
+        loader.classList.add("hidden");
+      }, 1200);
+    });
+  </script>
 </body>
 </html>
