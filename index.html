@@ -697,103 +697,87 @@ class="h-16 object-contain"
 </section>
 
 <!-- CONTACT -->
-<section class="py-20 px-10 grid lg:grid-cols-2 gap-16">
-
-<div>
-
-<h2 class="section-title mb-10">
-ติดต่อ <span class="highlight">เรา</span>
-</h2>
-
-<div class="space-y-8">
-
-<div>
-<h4 class="font-bold uppercase text-red-300 mb-2">
-🚩 ที่ตั้งร้าน
-</h4>
-
-<p class="text-gray-300">
-58 หมู่ 11 ตำบลบึงบา อำเภอหนองเสือ จังหวัดปทุมธานี 12170
-</p>
-</div>
-
-<div>
-<h4 class="font-bold uppercase text-red-300 mb-2">
-📞 เบอร์โทรศัพท์และอีเมล
-</h4>
-
-<p class="text-gray-300">
-094-393-3144 / 062-564-1224        EMAIL : subin.210443@gmail.com
-</p>
-</div>
-
-<div>
-  <h4 class="font-bold uppercase text-red-300 mb-4">
-    📱 โซเชียลมีเดีย
-  </h4>
-
-  <div class="flex flex-wrap gap-4">
-
-    <!-- Facebook -->
-    <a 
-      href="https://www.facebook.com/profile.php?id=61585347449896"
-      target="_blank"
-      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-blue-600 transition font-bold uppercase">
-      Facebook
-    </a>
-
-    <!-- Shopee -->
-    <a 
-      href="https://shopee.co.th/tigerswamptoolss_2026?entryPoint=ShopBySearch&searchKeyword=tigerswamptools"
-      target="_blank"
-      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-orange-500 transition font-bold uppercase">
-      Shopee
-    </a>
-
-    <!-- Lazada -->
-    <a 
+<!-- CONTACT & NEW PRODUCT -->
+<section class="py-20 px-10">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
       
-      href="https://www.lazada.co.th/" 
-      target="_blank"
-      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-purple-600 transition font-bold uppercase">
-      Lazada
-    </a>
-
-    <!-- TikTok -->
-    <a 
-      href="https://vt.tiktok.com/ZS93hSDF6/?page=TikTokShop" 
-      target="_blank"
-      class="bg-[#1c1b1b] border border-[#353534] px-5 py-3 hover:bg-pink-500 transition font-bold uppercase">
-      TikTok
-    </a>
-
+      <!-- ฝั่งซ้าย: ข้อมูลติดต่อ + แผนที่ Google Maps -->
+      <div class="flex flex-col gap-8">
+        
+        <!-- ข้อมูลติดต่อ -->
+        <div class="bg-[#1c1b1b] p-8 rounded-xl border border-[#353534]">
+          <h2 class="section-title mb-6" style="font-size: 42px;">
+            ติดต่อ <span class="highlight">เรา</span>
+          </h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-bold uppercase text-red-300 mb-1 text-lg">🚩 ที่ตั้งร้าน</h4>
+              <p class="text-gray-300 text-sm">58 หมู่ 11 ตำบลบึงบา อำเภอหนองเสือ จังหวัดปทุมธานี 12170</p>
+            </div>
+            
+            <div>
+              <h4 class="font-bold uppercase text-red-300 mb-1 text-lg">📞 เบอร์โทรศัพท์และอีเมล</h4>
+              <p class="text-gray-300 text-sm">094-393-3144 / 062-564-1224</p>
+              <p class="text-gray-500 text-xs mt-1">EMAIL : subin.210443@gmail.com</p>
+            </div>
+            
+            <div>
+              <h4 class="font-bold uppercase text-red-300 mb-3 text-lg">📱 โซเชียลมีเดีย</h4>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61585347449896" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-blue-600 transition font-bold uppercase text-center text-xs">Facebook</a>
+                <a href="https://shopee.co.th/tigerswamptoolss_2026?entryPoint=ShopBySearch&searchKeyword=tigerswamptools" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-orange-500 transition font-bold uppercase text-center text-xs">Shopee</a>
+                <a href="https://www.lazada.co.th/" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-purple-600 transition font-bold uppercase text-center text-xs">Lazada</a>
+                <a href="https://vt.tiktok.com/ZS93hSDF6/?page=TikTokShop" target="_blank" class="bg-black border border-[#353534] py-2.5 hover:bg-pink-500 transition font-bold uppercase text-center text-xs">TikTok</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- แผนที่ Google Maps -->
+        <div class="relative overflow-hidden border-4 border-[#353534] rounded-xl flex-1 min-h-[350px]">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.google.com/maps?q=58%20หมู่%2011%20ตำบลบึงบา%20อำเภอหนองเสือ%20จังหวัดปทุมธานี%2012170&output=embed"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+          <a href="https://www.google.com/maps/dir//58+Tiger+Swamp+Tools+s.+%E0%B  8%95%E0%B8%B1%E0%B8%A2%E0%B8%A5+%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B1%E0%B8%87+%E0%B8%B0%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD+%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD+%E0%B8%9F%E0%B8%B2%E0%B8%97%E0%B8%B8%E0%B8%A1%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5+12170/@14.111472,100.846691,15z" target="_blank" class="absolute bottom-4 left-4 bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2.5 uppercase tracking-wider transition z-10 text-xs">
+            เปิดใน Google Maps →
+          </a>
+        </div>
+        
+      </div>
+      
+      <!-- ฝั่งขวา: สินค้าใหม่ Coming Soon (อยู่ขวาแบบเต็ม ๆ ไม่เบียดใคร) -->
+      <div class="card p-8 flex flex-col justify-between bg-[#1c1b1b] rounded-xl border border-[#353534]">
+        <div>
+          <div class="bg-orange-600 text-white inline-block px-4 py-2 uppercase tracking-widest mb-6 font-bold text-sm w-full text-center">
+            สินค้าใหม่ Coming Soon
+          </div>
+          <div class="flex justify-center items-center py-4">
+            <img src="<a href="https://ibb.co/MDhpjdR1"><img src="https://i.ibb.co/FbWJfpBY/S-27484163.jpg" alt="S-27484163" border="0"></a>
+          </div>
+        </div>
+        
+        <div class="text-center mt-6">
+          <h3 class="text-4xl font-black tracking-wider text-white logo-text mb-2">
+            TIGER SWAMP ARC
+          </h3>
+          <p class="text-2xl font-bold text-red-500 tracking-wide mb-2">MMA-300</p>
+          <p class="text-gray-400 text-sm">เครื่องเชื่อมแรง ทนทาน คุ้มค่า สัมผัสความแรงเร็ว ๆ นี้</p>
+        </div>
+      </div>
+      
+    </div>
+    
   </div>
-</div>
-
-<!-- MAP -->
-<div class="relative overflow-hidden border-4 border-[#353534] min-h-[500px] rounded-xl">
-
-<!-- Google Maps Embed -->
-<iframe
-class="absolute inset-0 w-full h-full"
-src="https://www.google.com/maps?q=58%20หมู่%2011%20ตำบลบึงบา%20อำเภอหนองเสือ%20จังหวัดปทุมธานี%2012170&output=embed"
-style="border:0;"
-allowfullscreen=""
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-<!-- Overlay -->
-<div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
-
-<!-- Click Button -->
-<a
-href="https://www.google.com/maps/dir//58+Tiger+Swamp+Tools+s.+%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5+%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B1%E0%B8%87+%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD+%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD+%E0%B8%9B%E0%B8%97%E0%B8%B8%E0%B8%A1%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5+12170/@13.8835772,100.1847803,10z/data=!4m17!1m8!3m7!1s0x311d9d001b81bb47:0xc17cf9d6ef8191cf!2sTiger+Swamp+Tools+s.!8m2!3d14.111472!4d100.846691!15sCooBNTgg4Lir4Lih4Li54LmIIDExIOC4leC4s-C4muC4peC4muC4tuC4h-C4muC4siDguK3guLPguYDguKDguK3guKvguJnguK3guIfguYDguKrguLfguK0g4LiI4Lix4LiH4Lir4Lin4Lix4LiU4Lib4LiX4Li44Lih4LiY4Liy4LiZ4Li1IDEyMTcwkgEIdG9vbHJvb23gAQA!16s%2Fg%2F11nbkf8rjm!4m7!1m0!1m5!1m1!1s0x311d9d001b81bb47:0xc17cf9d6ef8191cf!2m2!1d100.846691!2d14.111472?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
-target="_blank"
-class="absolute bottom-6 left-6 bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 uppercase tracking-wider transition z-10">
-
-เปิดใน Google Maps →
-
+</section>
 </a>
 
 </div>
