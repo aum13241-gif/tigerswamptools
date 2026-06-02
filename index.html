@@ -254,21 +254,67 @@
   </div>
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-red-900 px-10 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-10">
-      <h1 class="text-5xl tracking-wider text-red-400 logo-text">Tiger Swamp Tools</h1>
-      <nav class="hidden lg:flex gap-6">
-        <a class="nav-link text-red-300" href="#">หน้าแรก</a>
-        <a class="nav-link" href="companydata.html">ข้อมูลบริษัท</a>
-        <a class="nav-link" href="#brands">แบรนด์สินค้า</a>
-        <a class="nav-link" href="#contact">ติดต่อเรา</a>
-      </nav>
-    </div>
+  <!-- HEADER -->
+<header class="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-red-900">
+
+  <div class="flex justify-between items-center px-4 md:px-10 py-4">
+
     <div class="flex items-center gap-4">
-      <input class="bg-[#1c1b1b] border border-[#353534] px-4 py-2" placeholder="ค้นหาเครื่องมือ..." type="text">
+      <h1 class="text-3xl md:text-5xl tracking-wider text-red-400 logo-text">
+        Tiger Swamp Tools
+      </h1>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden lg:flex gap-6">
+      <a class="nav-link text-red-300" href="#">หน้าแรก</a>
+      <a class="nav-link" href="companydata.html">ข้อมูลบริษัท</a>
+      <a class="nav-link" href="#brands">แบรนด์สินค้า</a>
+      <a class="nav-link" href="#contact">ติดต่อเรา</a>
+    </nav>
+
+    <!-- Desktop Search -->
+    <div class="hidden lg:flex items-center gap-4">
+      <input
+        class="bg-[#1c1b1b] border border-[#353534] px-4 py-2"
+        placeholder="ค้นหาเครื่องมือ..."
+        type="text">
       <span class="material-symbols-outlined cursor-pointer">search</span>
     </div>
-  </header>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="lg:hidden text-white text-4xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-black border-t border-red-900">
+
+    <a href="#"
+       class="block px-6 py-4 text-white border-b border-gray-800">
+       หน้าแรก
+    </a>
+
+    <a href="companydata.html"
+       class="block px-6 py-4 text-white border-b border-gray-800">
+       ข้อมูลบริษัท
+    </a>
+
+    <a href="#brands"
+       class="block px-6 py-4 text-white border-b border-gray-800">
+       แบรนด์สินค้า
+    </a>
+
+    <a href="#contact"
+       class="block px-6 py-4 text-white border-b border-gray-800">
+       ติดต่อเรา
+    </a>
+
+  </div>
+
+</header>
 
   <!-- HERO -->
   <section class="relative h-screen overflow-hidden flex items-center">
@@ -499,12 +545,24 @@
 
   <!-- SCRIPT -->
   <script>
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("loader");
-      setTimeout(() => {
-        loader.classList.add("hidden");
-      }, 1200);
+window.addEventListener("load", () => {
+
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 1200);
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
-  </script>
+  }
+
+});
+</script>
 </body>
 </html>
