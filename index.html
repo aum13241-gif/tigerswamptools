@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Tiger Swamp Tools | ร้านขายเครื่องมือช่างออนไลน์</title>
+  <title>Tiger Swamp Tools s. | ร้านขายเครื่องมือช่างออนไลน์</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
@@ -247,83 +247,49 @@
 
 <body class="industrial-grid">
 
-  <!-- LOADING SCREEN -->
   <div class="loader" id="loader">
-    <div class="loader-logo">Tiger Swamp Tools</div>
+    <div class="loader-logo">Tiger Swamp Tools s.</div>
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- HEADER -->
-  <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-red-900">
+  <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-red-900">
+    <div class="flex justify-between items-center px-4 md:px-10 py-4">
+      <div class="flex items-center gap-4">
+        <h1 class="text-3xl md:text-5xl tracking-wider text-red-400 logo-text">
+          Tiger Swamp Tools s.
+        </h1>
+      </div>
 
-  <div class="flex justify-between items-center px-4 md:px-10 py-4">
+      <nav class="hidden lg:flex gap-6">
+        <a class="nav-link text-red-300" href="#">หน้าแรก</a>
+        <a class="nav-link" href="companydata.html">ข้อมูลบริษัท</a>
+        <a class="nav-link" href="#brands">แบรนด์สินค้า</a>
+        <a class="nav-link" href="#contact">ติดต่อเรา</a>
+      </nav>
 
-    <div class="flex items-center gap-4">
-      <h1 class="text-3xl md:text-5xl tracking-wider text-red-400 logo-text">
-        Tiger Swamp Tools
-      </h1>
+      <div class="hidden lg:flex items-center gap-4">
+        <input class="bg-[#1c1b1b] border border-[#353534] px-4 py-2" placeholder="ค้นหาเครื่องมือ..." type="text">
+        <span class="material-symbols-outlined cursor-pointer">search</span>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden text-white text-4xl">☰</button>
     </div>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden lg:flex gap-6">
-      <a class="nav-link text-red-300" href="#">หน้าแรก</a>
-      <a class="nav-link" href="companydata.html">ข้อมูลบริษัท</a>
-      <a class="nav-link" href="#brands">แบรนด์สินค้า</a>
-      <a class="nav-link" href="#contact">ติดต่อเรา</a>
-    </nav>
-
-    <!-- Desktop Search -->
-    <div class="hidden lg:flex items-center gap-4">
-      <input
-        class="bg-[#1c1b1b] border border-[#353534] px-4 py-2"
-        placeholder="ค้นหาเครื่องมือ..."
-        type="text">
-      <span class="material-symbols-outlined cursor-pointer">search</span>
+    <div id="mobileMenu" class="hidden lg:hidden bg-black border-t border-red-900">
+      <a href="#" class="block px-6 py-4 text-white border-b border-gray-800">หน้าแรก</a>
+      <a href="companydata.html" class="block px-6 py-4 text-white border-b border-gray-800">ข้อมูลบริษัท</a>
+      <a href="#brands" class="block px-6 py-4 text-white border-b border-gray-800">แบรนด์สินค้า</a>
+      <a href="#contact" class="block px-6 py-4 text-white border-b border-gray-800">ติดต่อเรา</a>
     </div>
+  </header>
 
-    <!-- Mobile Button -->
-    <button id="menuBtn" class="lg:hidden text-white text-4xl">
-      ☰
-    </button>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden lg:hidden bg-black border-t border-red-900">
-
-    <a href="#"
-       class="block px-6 py-4 text-white border-b border-gray-800">
-       หน้าแรก
-    </a>
-
-    <a href="companydata.html"
-       class="block px-6 py-4 text-white border-b border-gray-800">
-       ข้อมูลบริษัท
-    </a>
-
-    <a href="#brands"
-       class="block px-6 py-4 text-white border-b border-gray-800">
-       แบรนด์สินค้า
-    </a>
-
-    <a href="#contact"
-       class="block px-6 py-4 text-white border-b border-gray-800">
-       ติดต่อเรา
-    </a>
-
-  </div>
-
-</header>
-
-  <!-- HERO -->
   <section class="relative h-screen overflow-hidden flex items-center">
     <img class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1800&auto=format&fit=crop">
     <div class="absolute inset-0 hero-overlay"></div>
     <div class="hero-glow"></div>
     <div class="relative z-10 max-w-4xl px-12">
       <div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-6">ร้านขายเครื่องมือช่างคุณภาพสูง</div>
-      <h2 class="hero-title text-5xl md:text-8xl uppercase mb-6 leading-none">Tiger Swamp <span class="highlight">Tools</span></h2>
+      <h2 class="hero-title text-5xl md:text-8xl uppercase mb-6 leading-none">Tiger Swamp <span class="highlight">Tools s.</span></h2>
       <p class="text-xl text-gray-300 mb-10 leading-relaxed">เครื่องมือและอุปกรณ์งานช่างระดับมืออาชีพ สำหรับงานอุตสาหกรรม งานก่อสร้าง และงานหนักทุกประเภท</p>
       <div class="flex gap-4">
         <a class="btn-main inline-block" href="https://heyzine.com/flip-book/558e502ac4.html" target="_blank">ดูแคตตาล็อก</a>
@@ -332,19 +298,15 @@
     </div>
   </section>
 
-  <!-- NEW PRODUCT COMING SOON (ย้ายมาไว้หน้าแรกสุด ต่อจาก Hero) -->
   <section class="py-20 px-10 bg-[#131313]">
     <div class="max-w-4xl mx-auto">
       <div class="card p-8 flex flex-col justify-between bg-[#1c1b1b] rounded-xl border border-[#353534]">
         <div class="relative bg-black/40 rounded-lg p-6 flex justify-center items-center overflow-hidden border border-[#353534]/60">
-          <!-- ป้าย Coming Soon -->
           <div class="absolute top-4 left-4 bg-gradient-to-r from-orange-600 to-amber-500 text-white px-4 py-1.5 uppercase tracking-widest font-black text-xs rounded shadow-lg z-10">
             🔥 สินค้าใหม่ Coming Soon
           </div>
-          <!-- รูปภาพตู้เชื่อม -->
           <img src="https://i.ibb.co/FbWJfpBY/S-27484163.jpg" alt="Tiger Swamp Arc" class="max-h-[380px] object-contain rounded-md drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
         </div>
-        
         <div class="text-center mt-6">
           <h3 class="text-4xl font-black tracking-wider text-white logo-text mb-2">TIGER SWAMP ARC</h3>
           <p class="text-2xl font-bold text-red-500 tracking-wide mb-2">MMA-300</p>
@@ -354,57 +316,16 @@
     </div>
   </section>
 
-  <!-- MILWAUKEE PRODUCTS -->
   <section class="py-20 px-10 bg-[#1c1b1b]">
     <div class="text-center mb-14">
       <h2 class="section-title">เครื่องมือ <span class="highlight">Milwaukee</span></h2>
       <p class="uppercase tracking-widest text-gray-400 mt-4">เครื่องมือระดับมืออาชีพ แข็งแรง ทนทาน พร้อมลุยทุกงาน</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- PRODUCT 1 -->
-      <div class="card">
-        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81ztj-mnwmqtr7ffnsb0">
-        <div class="p-6">
-          <h3 class="text-2xl font-bold mb-3 text-red-400">เครื่องอัดจารบีไร้สาย 18 โวลต์ M18 GG-0</h3>
-          <p class="text-gray-300 mb-5">แรงดันสูงสุด 690 บาร์ในระดับที่ใช้ในอุตสาหกรรม</p>
-          <a href="drill.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 2 -->
-      <div class="card">
-        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81ztc-mnwf67pc25fl24">
-        <div class="p-6">
-          <h3 class="text-2xl font-bold mb-3 text-red-400">สว่านแท่นแม่เหล็กไร้สาย M18 FMDP-0C0</h3>
-          <p class="text-gray-300 mb-5">สว่านกำลังสูง สำหรับงานเจาะและงานอุตสาหกรรม</p>
-          <a href="drill2.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 3 -->
-      <div class="card">
-        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81ztd-mnxzjqv085511c">
-        <div class="p-6">
-          <h3 class="text-2xl font-bold mb-3 text-red-400">เครื่องเป่าเศษใบไม้ไร้สาย 36V M18 2824-20</h3>
-          <p class="text-gray-300 mb-5">เป็นเครื่องเป่าลมประสิทธิภาพสูงที่ใช้ระบบแบตเตอรี่คู่เหมาะสำหรับการใช้งานหนัก</p>
-          <a href="drill3.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 4 -->
-      <div class="card">
-        <img class="w-full h-64 object-cover" src="https://down-th.img.susercontent.com/th-11134207-81zte-mny1jeoo6w3m7a">
-        <div class="p-6">
-          <h3 class="text-2xl font-bold mb-3 text-red-400">ปั๊มสุญญากาศ MILWAUKEE M18 FVP5-0</h3>
-          <p class="text-gray-300 mb-5">กำจัดสายไฟรุงรัง สร้างสูญญากาศได้เร็วขึ้นด้วยระบบ Manifold Mode</p>
-          <a href="drill4.html" class="btn-main w-full text-center block">ดูรายละเอียด</a>
-        </div>
-      </div>
-    </div>
+    <div id="milwaukee-dynamic-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+       </div>
   </section>
 
-  <!-- CATEGORY -->
   <section class="py-20 px-10 bg-[#131313]">
     <div class="text-center mb-16">
       <h2 class="section-title">หมวดหมู่<span class="highlight">สินค้า</span></h2>
@@ -412,12 +333,11 @@
     </div>
 
     <div class="grid lg:grid-cols-2 gap-8">
-      <!-- CARD 1 -->
       <div class="card relative h-[450px]">
         <img class="w-full h-full object-cover opacity-70" src="https://www.milwaukeetool.in.th/media/wysiwyg/homepage/M18_FMTIW2F12--App09.jpg">
         <div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
           <div class="bg-red-700 inline-block px-4 py-2 uppercase tracking-widest mb-4 w-fit">ตัวแทนจำหน่ายอันดับ 1 จังหวัดปทุมธานี</div>
-          <h3 class="text-4xl font-bold mb-4">ศูนย์ตัวแทนจำหน่าย<br><span class="text-cyan-400">Tiger Swamp Tools</span></h3>
+          <h3 class="text-4xl font-bold mb-4">ศูนย์ตัวแทนจำหน่าย<br><span class="text-cyan-400">Tiger Swamp Tools s.</span></h3>
           <p class="text-gray-300 mb-4 leading-relaxed">ตัวแทนจำหน่ายเครื่องมือช่างและเครื่องมือไฟฟ้าคุณภาพสูง ที่ได้รับความไว้วางใจในจังหวัดปทุมธานี พร้อมบริการครบวงจร</p>
           <div class="flex items-center gap-3 text-orange-400 font-bold uppercase tracking-wider">
             <span class="material-symbols-outlined">verified</span>ศูนย์จำหน่ายมาตรฐานมืออาชีพ
@@ -426,7 +346,6 @@
         </div>
       </div>
 
-      <!-- CARD 2 -->
       <div class="card relative h-[450px]">
         <img class="w-full h-full object-cover opacity-70" src="https://static.summitracing.com/global/images/prod/xlarge/mwt-2960-20_kk_xl.jpg">
         <div class="absolute inset-0 card-overlay flex flex-col justify-end p-8">
@@ -438,29 +357,24 @@
     </div>
   </section>
 
-  <!-- BRANDS -->
   <section id="brands" class="py-20 px-10 bg-[#1c1b1b]">
     <div class="text-center mb-16">
       <h2 class="section-title">แบรนด์<span class="highlight">สินค้า</span></h2>
       <p class="uppercase tracking-widest text-gray-400 mt-4">เลือกแบรนด์เครื่องมือระดับมืออาชีพ</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-      <!-- MILWAUKEE -->
       <a href="brand-milwaukee.html" class="brand-card rounded-2xl hover:scale-105">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkW8u2C2W-zy4aCjAs_-c47kTS57DLxRkAww&s" class="h-16 object-contain">
       </a>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="py-20 px-10 bg-[#131313]">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-        
-        <!-- ข้อมูลติดต่อ -->
         <div class="bg-[#1c1b1b] p-8 rounded-xl border border-[#353534] flex flex-col justify-between">
           <div>
-            <h2 class="section-title mb-6" style="font-size: 42px;">ติดต่อ <span class="highlight">เรา</span></h2>
+            <h2 class="section-title mb-6" style="font-size: 42px;">ติดต่อ<span class="highlight">เรา</span></h2>
             <div class="space-y-6">
               <div>
                 <h4 class="font-bold uppercase text-red-300 mb-1 text-lg">🚩 ที่ตั้งร้าน</h4>
@@ -473,7 +387,6 @@
               </div>
             </div>
           </div>
-          
           <div class="mt-6">
             <h4 class="font-bold uppercase text-red-300 mb-3 text-lg">📱 โซเชียลมีเดีย</h4>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -484,23 +397,19 @@
             </div>
           </div>
         </div>
-        
-        <!-- แผนที่ Google Maps -->
         <div class="relative overflow-hidden border-4 border-[#353534] rounded-xl min-h-[400px]">
           <iframe class="absolute inset-0 w-full h-full" src="https://www.google.com/maps?q=58%20หมู่%2011%20ตำบลบึงบา%20อำเภอหนองเสือ%20จังหวัดปทุมธานี%2012170&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
           <a href="https://www.google.com/maps/dir//58+Tiger+Swamp+Tools" target="_blank" class="absolute bottom-4 left-4 bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2.5 uppercase tracking-wider transition z-10 text-xs">เปิดใน Google Maps →</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="bg-black py-16 px-10 border-t-4 border-orange-500">
     <div class="grid md:grid-cols-4 gap-10">
       <div>
-        <h3 class="text-3xl font-black italic text-red-400 mb-4">Tiger Swamp Tools</h3>
+        <h3 class="text-3xl font-black italic text-red-400 mb-4">Tiger Swamp Tools s.</h3>
         <p class="text-gray-500">ร้านจำหน่ายเครื่องมือช่างและอุปกรณ์อุตสาหกรรมคุณภาพสูง</p>
       </div>
       <div>
@@ -538,31 +447,51 @@
     <p class="text-center text-gray-500 mt-12 text-sm">© 2026 Tiger Swamp Tools สงวนลิขสิทธิ์ทั้งหมด</p>
   </footer>
 
-  <!-- FAB (Messenger) -->
   <a href="https://m.me/61585347449896" target="_blank" class="fab">
     <span class="material-symbols-outlined">chat_bubble</span>
   </a>
 
-  <!-- SCRIPT -->
+  <script src="products.js"></script>
+
   <script>
-window.addEventListener("load", () => {
+    window.addEventListener("load", () => {
+      // โค้ด Loader หน้าเว็บเดิมของคุณ
+      const loader = document.getElementById("loader");
+      setTimeout(() => {
+        loader.classList.add("hidden");
+      }, 1200);
 
-  const loader = document.getElementById("loader");
+      // โค้ดปุ่มเปิดปิดเมนูมือถือเดิมของคุณ
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
 
-  setTimeout(() => {
-    loader.classList.add("hidden");
-  }, 1200);
-
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn) {
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+      // --- ส่วนเพิ่มใหม่: ดึงสินค้าในไฟล์ products.js มาวาดลงดีไซน์เดิมของคุณ ---
+      const productContainer = document.getElementById('milwaukee-dynamic-list');
+      
+      if (productContainer && typeof milwaukeeProducts.slice(0, 4) !== 'undefined') {
+          let dynamicHTML = '';
+          
+          milwaukeeProducts.slice(0, 4).forEach(product => {
+              dynamicHTML += `
+                <div class="card">
+                  <img class="w-full h-64 object-cover" src="${product.image}">
+                  <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-3 text-red-400">${product.name}</h3>
+                    <p class="text-gray-300 mb-5">${product.description}</p>
+                    <a href="product-detail.html?id=${product.id}" class="btn-main w-full text-center block">ดูรายละเอียด</a>
+                  </div>
+                </div>
+              `;
+          });
+          
+          productContainer.innerHTML = dynamicHTML;
+      }
     });
-  }
-
-});
-</script>
+  </script>
 </body>
 </html>

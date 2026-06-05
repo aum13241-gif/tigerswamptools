@@ -4,332 +4,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Milwaukee Products - Tiger Swamp Tools</title>
-
 <script src="https://cdn.tailwindcss.com"></script>
-
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
+body{ background:#131313; color:white; font-family:'Hanken Grotesk',sans-serif; }
+.industrial-grid{ background-image: radial-gradient(circle,#2a2a2a 1px,transparent 1px); background-size:30px 30px; }
+.logo-text{ font-family:'Bebas Neue',sans-serif; letter-spacing:3px; }
+.section-title{ font-family:'Bebas Neue',sans-serif; letter-spacing:4px; }
+.header{ background:rgba(0,0,0,.8); backdrop-filter:blur(10px); border-bottom:1px solid #3a3a3a; }
 
-body{
-    background:#131313;
-    color:white;
-    font-family:'Hanken Grotesk',sans-serif;
-}
-
-/* GRID BACKGROUND */
-.industrial-grid{
-    background-image:
-    radial-gradient(circle,#2a2a2a 1px,transparent 1px);
-    background-size:30px 30px;
-}
-
-/* TITLE */
-.logo-text{
-    font-family:'Bebas Neue',sans-serif;
-    letter-spacing:3px;
-}
-
-.section-title{
-    font-family:'Bebas Neue',sans-serif;
-    letter-spacing:4px;
-}
-
-/* HEADER */
-.header{
-    background:rgba(0,0,0,.8);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid #3a3a3a;
-}
-
-/* PRODUCT CARD */
-.product-card{
-    background:#1c1b1b;
-    border:1px solid #353534;
-    border-radius:24px;
-    overflow:hidden;
-    transition:.4s;
-    position:relative;
-}
-
-.product-card:hover{
-    transform:translateY(-10px);
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.5),
-    0 0 20px rgba(211,47,47,.25);
-}
-
-.product-image{
-    height:260px;
-    overflow:hidden;
-    background:white;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    transition:.6s;
-}
-
-.product-card:hover img{
-    transform:scale(1.08);
-}
-
-/* TEXT */
-.product-code{
-    color:#999;
-    font-size:13px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-
-.product-name{
-    font-size:24px;
-    font-weight:700;
-    color:#ff4d4d;
-    line-height:1.3;
-    margin-top:10px;
-    min-height:70px;
-}
-
-/* BUTTONS */
-.btn-group{
-    display:flex;
-    gap:12px;
-    margin-top:24px;
-}
-
-.btn{
-    flex:1;
-    padding:14px;
-    border:none;
-    border-radius:14px;
-    cursor:pointer;
-    font-weight:700;
-    transition:.3s;
-    text-transform:uppercase;
-}
-
-.btn-detail{
-    background:#2c2c2c;
-    color:white;
-}
-
-.btn-detail:hover{
-    background:#3b3b3b;
-}
-
-.btn-cart{
-    background:#d32f2f;
-    color:white;
-}
-
-.btn-cart:hover{
-    background:#f44336;
-}
+/* PRODUCT CARD STYLES */
+.product-card{ background:#1c1b1b; border:1px solid #353534; border-radius:24px; overflow:hidden; transition:.4s; position:relative; }
+.product-card:hover{ transform:translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,.5), 0 0 20px rgba(211,47,47,.25); }
+.product-image{ height:260px; overflow:hidden; background:white; display:flex; align-items:center; justify-content:center; }
+.product-image img{ width:100%; height:100%; object-fit:contain; transition:.6s; }
+.product-card:hover img{ transform:scale(1.08); }
+.product-name{ font-size:24px; font-weight:700; color:#ff4d4d; line-height:1.3; margin-top:10px; padding: 0 16px; }
+.product-desc{ color:#999; font-size:14px; margin: 10px 16px 20px 16px; min-height: 40px; }
+.btn-cart{ background:#d32f2f; color:white; padding:14px; border-radius:14px; display:block; text-align:center; font-weight:700; margin: 16px; }
+.btn-cart:hover{ background:#f44336; }
 
 /* HERO */
-.hero{
-    padding:100px 20px;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-}
+.hero{ padding:100px 20px; text-align:center; position:relative; overflow:hidden; }
+.hero::before{ content:''; position:absolute; width:500px; height:500px; background:rgba(211,47,47,.15); filter:blur(120px); top:-150px; right:-150px; border-radius:999px; }
+.hero h1{ font-size:80px; line-height:.9; margin-bottom:20px; }
+.hero p{ color:#999; font-size:20px; }
 
-.hero::before{
-    content:'';
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:rgba(211,47,47,.15);
-    filter:blur(120px);
-    top:-150px;
-    right:-150px;
-    border-radius:999px;
-}
-
-.hero h1{
-    font-size:80px;
-    line-height:.9;
-    margin-bottom:20px;
-}
-
-.hero p{
-    color:#999;
-    font-size:20px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:52px;
-    }
-
-    .product-name{
-        font-size:20px;
-        min-height:auto;
-    }
-
-    .btn-group{
-        flex-direction:column;
-    }
-
-}
-
+@media(max-width:768px){ .hero h1{ font-size:52px; } }
 </style>
-
 </head>
 
 <body class="industrial-grid">
 
 <!-- HEADER -->
 <header class="header sticky top-0 z-50">
-
-<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-
-<h1 class="text-4xl text-red-500 logo-text">
-Tiger Swamp Tools
-</h1>
-
-<a
-href="index.html"
-class="bg-red-600 hover:bg-red-500 px-6 py-3 rounded-xl font-bold transition"
->
-กลับหน้าแรก
-</a>
-
-</div>
-
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <h1 class="text-4xl text-red-500 logo-text">Tiger Swamp Tools</h1>
+    <a href="index.html" class="bg-red-600 hover:bg-red-500 px-6 py-3 rounded-xl font-bold transition">กลับหน้าแรก</a>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-
-<h1 class="section-title">
-MILWAUKEE<br>
-<span class="text-red-600">PRODUCTS</span>
-</h1>
-
-<p>
-เครื่องมือระดับมืออาชีพ สำหรับงานอุตสาหกรรมและงานหนัก
-</p>
-
+  <h1 class="section-title">MILWAUKEE<br><span class="text-red-600">PRODUCTS</span></h1>
+  <p>เครื่องมือระดับมืออาชีพ สำหรับงานอุตสาหกรรมและงานหนัก</p>
 </section>
 
-<!-- PRODUCTS -->
+<!-- PRODUCT GRID -->
 <section class="max-w-7xl mx-auto px-6 pb-24">
-
-<div
-id="product-display"
-class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
->
-</div>
-
-</section>
-
-<script>
-
-const milwaukeeProducts = [
-
-    {
-        name: "ชุดไขควง 6 ชิ้น",
-        detail: "4932498637 PACKOUT FREEDOM",
-        image: "https://via.placeholder.com/500x500?text=Screwdriver",
-    },
-
-    {
-        name: "ชุดไขควงหัวทอร์ค Precision 6 ชิ้น",
-        detail: "Precision TORX Screwdriver Set",
-        image: "https://via.placeholder.com/500x500?text=Torx+Set",
-    },
-
-    {
-        name: "M12 FUEL™ เครื่องขัดกระดาษทราย",
-        detail: "M12 FROS50-0",
-        image: "https://via.placeholder.com/500x500?text=Sander",
-    },
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
-    {
-        name: "M12 FUEL™ เครื่องขัดกระดาษทราย",
-        detail: "M12 FROS50-0",
-        image: "https://via.placeholder.com/500x500?text=Sander",
-    },
+    <!-- กล่องสินค้าชิ้นที่ 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://image.makewebcdn.com/makeweb/m_1920x0/2dP9r9iWx/DefaultData/m12_fpd2_hero_1.png" alt="Product">
+      </div>
+      <h3 class="product-name">สว่านกระแทก M12 FUEL™</h3>
+      <p class="product-desc">M12 FPD2-0 | สว่านกระแทกขนาดซับคอมแพกต์ระดับพรีเมียม</p>
+      <a href="product-detail.html?id=m12-fpd2-0" class="btn-cart">ดูรายละเอียด</a>
+    </div>
 
-    {
-        name: "M12 FUEL™ เครื่องขัดกระดาษทราย",
-        detail: "M12 FROS50-0",
-        image: "https://via.placeholder.com/500x500?text=Sander",
-    },
-    {
-        name: "M12 FUEL™ เครื่องขัดกระดาษทราย",
-        detail: "M12 FROS50-0",
-        image: "https://via.placeholder.com/500x500?text=Sander",
-    },
+    <!-- กล่องสินค้าชิ้นที่ 2 (ก๊อปปี้ไปวางเพิ่มได้เลย) -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.milwaukeetool.in.th/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/m/1/m12-fid2_hero_1.png" alt="Product">
+      </div>
+      <h3 class="product-name">ไขควงกระแทก M12 FUEL™</h3>
+      <p class="product-desc">M12 FID2-0 | แรงบิดสูง ควบคุมง่าย</p>
+      <a href="product-detail.html?id=m12-fid2-0" class="btn-cart">ดูรายละเอียด</a>
+    </div>
 
+    <!-- กล่องสินค้าชิ้นที่ 3 (ก๊อปปี้ไปวางเพิ่มได้เลย) -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://image.makewebcdn.com/makeweb/m_1920x0/2dP9r9iWx/DefaultData/milwaukee_installation_drill_driver_m12_fuel_07_png.webp?v=202405291424" alt="Product">
+      </div>
+      <h3 class="product-name">บล็อกกระแทก M12 FUEL™</h3>
+      <p class="product-desc">M12 FDDXKIT-OX | แรงบิดสูงสุดในรุ่น</p>
+      <a href="product-detail.html?id=m12-fddxkit-ox" class="btn-cart">ดูรายละเอียด</a>
+    </div>
 
-
-
-];
-
-function renderProducts(){
-
-    const display =
-    document.getElementById('product-display');
-
-    display.innerHTML =
-    milwaukeeProducts.map(item => `
-
-        <div class="product-card">
-
-            <!-- IMAGE -->
-            <div class="product-image">
-
-                <img
-                src="${item.image}"
-                alt="${item.name}"
-                >
-
-            </div>
-
-            <!-- CONTENT -->
-            <div class="p-6">
-
-                <div class="product-code">
-                    ${item.detail}
-                </div>
-
-                <div class="product-name">
-                    ${item.name}
-                </div>
-
-                <!-- BUTTONS -->
-                <div class="btn-group">
-
-                    <button class="btn btn-detail">
-                        รายละเอียด
-                    </button>
-
-                    <button class="btn btn-cart">
-                        ใส่ตะกร้า
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    `).join('');
-
-}
-
-renderProducts();
-
-</script>
+  </div>
+</section>
 
 </body>
 </html>

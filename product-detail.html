@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="dark" lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดสินค้า</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#131313] text-gray-300 min-h-screen">
+
+    <header class="p-6 bg-black flex justify-between items-center border-b border-gray-800">
+        <h1 class="text-2xl font-bold text-red-600">TIGER SWAMP TOOLS</h1>
+     <a href="brand-milwaukee.html" class="text-gray-400 hover:text-white transition">
+  กลับหน้าสินค้า
+</a>
+        </a>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-8 mt-8 bg-[#1e1e1e] rounded-xl border border-gray-800" >
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="overflow-hidden rounded-xl border border-gray-700 bg-black p-4">
+
+ <!-- รูปใหญ่ -->
+<div class="flex items-center justify-center h-[450px] bg-white rounded-lg p-4">
+    <img id="p-image"
+         src=""
+         alt="รูปสินค้า"
+         class="max-w-full max-h-full object-contain">
+</div>
+    <!-- รูปย่อย -->
+    <div class="flex justify-center gap-3 mt-4">
+
+        <img id="thumb1"
+            class="w-20 h-20 object-contain border border-gray-600 rounded cursor-pointer hover:border-red-500"
+            onclick="changeImage(this.src)">
+
+        <img id="thumb2"
+            class="w-20 h-20 object-contain border border-gray-600 rounded cursor-pointer hover:border-red-500"
+            onclick="changeImage(this.src)">
+
+        <img id="thumb3"
+            class="w-20 h-20 object-contain border border-gray-600 rounded cursor-pointer hover:border-red-500"
+            onclick="changeImage(this.src)">
+
+        <img id="thumb4"
+            class="w-20 h-20 object-contain border border-gray-600 rounded cursor-pointer hover:border-red-500"
+            onclick="changeImage(this.src)">
+    </div>
+
+</div>
+            
+            <div class="flex flex-col justify-between">
+                <div>
+                    <span id="p-detail" class="text-red-500 font-bold text-sm tracking-wider"></span>
+                    <h2 id="p-name" class="text-3xl font-bold text-white mt-2 mb-4"></h2>
+                    <p id="p-desc" class="leading-relaxed text-gray-400 mb-6"></p>
+                </div>
+                <div class="border-t border-gray-800 pt-4">
+                    <div class="text-sm text-gray-500">ราคา</div>
+                    <div class="text-3xl font-bold text-red-500 mt-1 mb-4"><span id="p-price"></span> ฿</div>
+                    <button class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition">
+                        หยิบใส่ตะกร้า
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="products.js"></script>
+    
+    <script>
+        
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    // ค้นหาสินค้า
+    const product = milwaukeeProducts.find(item => item.id === productId);
+
+    // ฟังก์ชันเปลี่ยนรูปใหญ่
+    function changeImage(src){
+        document.getElementById('p-image').src = src;
+    }
+
+    // แสดงข้อมูลสินค้า
+    if (product) {
+
+        document.title = `${product.name} | Tiger Swamp Tools`;
+
+        document.getElementById('p-name').innerText = product.name;
+        document.getElementById('p-detail').innerText = product.detail;
+        document.getElementById('p-image').src = product.image;
+        document.getElementById('p-desc').innerText = product.description;
+        document.getElementById('p-price').innerText = product.price;
+
+        // โหลดรูปย่อย
+        if(product.images){
+
+            document.getElementById('thumb1').src =
+                product.images[0] || product.image;
+
+            document.getElementById('thumb2').src =
+                product.images[1] || product.image;
+
+            document.getElementById('thumb3').src =
+                product.images[2] || product.image;
+
+            document.getElementById('thumb4').src =
+                product.images[3] || product.image;
+
+        } else {
+
+            document.getElementById('thumb1').src = product.image;
+            document.getElementById('thumb2').src = product.image;
+            document.getElementById('thumb3').src = product.image;
+            document.getElementById('thumb4').src = product.image;
+
+        }
+
+    } else {
+
+        document.body.innerHTML = `
+            <div class="text-center py-20">
+                <h2 class="text-3xl font-bold text-red-500">
+                    ไม่พบข้อมูลสินค้า
+                </h2>
+            </div> 
+                `;
+    }
+</script>
+</body>
+</html>
